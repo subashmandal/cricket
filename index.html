@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XYZ Cricket Tournament</title>
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/png" href="Images/favicon_io/favicon-16x16.png" sizes="16x16">
+
+    <!-- For high-resolution displays -->
+    <link rel="icon" type="image/png" href="Images/favicon_io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="Images/favicon_io/apple-touch-icon.png" sizes="96x96">
+
+    <!-- Apple Touch Icon for iOS devices -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon_io/apple-touch-icon.png">
+
+    <!-- For older versions of IE (ICO format) -->
+    <link rel="shortcut icon" href="Images/favicon_io/favicon.ico">
+    
+    <!-- MDB Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- MDB Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .hero {
+            background: url('Images/img1.png') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+        }
+        .schedule {
+            background-color: #f5f5f5;
+            padding: 60px 0;
+        }
+
+        .team-profile img {
+            border-radius: 50%;
+        }
+        .contact {
+            background-color: #004D40;
+            color: white;
+            padding: 60px 0;
+        }
+        .newsletter {
+            background-color: #FFEB3B;
+            padding: 60px 0;
+            text-align: center;
+        }
+        .nav-link{
+            color: white;
+        }
+    </style>
+</head>
+<body class="position-relative">
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-black position-sticky sticky-top">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+      <!-- Toggle button -->
+      <button
+        data-mdb-collapse-init
+        class="navbar-toggler"
+        type="button"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="Images/logos/3f8fe1d77881cb06ca3cbfc74d4af692-removebg-preview.png"
+            height="50"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tournament</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sportsphere</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blogs</a>
+          </li>        
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="link-secondary me-3" href="#">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+  
+        <!-- Notifications -->
+        <div class="dropdown">
+          <a
+            data-mdb-dropdown-init
+            class="link-secondary me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            aria-expanded="false"
+          >
+            <i class="fas fa-bell"></i>
+            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <li>
+              <a class="dropdown-item" href="#">Some news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another news</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Avatar -->
+        <div class="dropdown">
+          <a
+            data-mdb-dropdown-init
+            class="dropdown-toggle d-flex align-items-center hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuAvatar"
+            role="button"
+            aria-expanded="false"
+          >
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              class="rounded-circle"
+              height="25"
+              alt="Black and White Portrait of a Man"
+              loading="lazy"
+            />
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="navbarDropdownMenuAvatar"
+          >
+            <li>
+              <a class="dropdown-item" href="#">My profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Settings</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Welcome to the Ultimate Cricket Championship 2024!</h1>
+            <p class="opacity-80">The most exciting cricket tournament of the year is here! Get ready to witness action-packed matches, star players, and unforgettable moments.</p>
+            <a href="#schedule" class="btn btn-lg btn-rounded text-white fw-bold" style="background-color: rgb(233, 43, 52);">Visit</a>
+        </div>
+    </section>
+
+    <!-- Scorecards -->
+    <section class="schedule" id="schedule">
+        <div class="container">
+            <div class="row d-flex scrol">
+                <div class="col-4 card text-center p-3">
+                    <div class="date" style="font-size: small;"></div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                        </div>
+                        <div class="col-6">
+                            <div class="fw-bold">117 - 106</b>
+                        </div>
+                        <div class="col-3">
+                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 card text-center p-3">
+                    <div class="date" style="font-size: small;"></div>
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                        </div>
+                        <div class="col-4">
+                            <p>117 - 106</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more match cards as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Profiles -->
+    <section class="teams" id="teams">
+        <div class="container">
+            <h2 class="section-title">Our Main Team</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="team-profile text-center">
+                        <img src="player1.jpg" class="img-fluid" alt="Player 1" style="width: 150px;">
+                        <h5>Player Name</h5>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="team-profile text-center">
+                        <img src="player2.jpg" class="img-fluid" alt="Player 2" style="width: 150px;">
+                        <h5>Player Name</h5>
+                    </div>
+                </div>
+                <!-- Add more player profiles -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title text-white">Contact Us</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-warning btn-block">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Get the best cricket stories into your inbox!</h2>
+            <form id="newsletterForm">
+                <input type="email" class="form-control" placeholder="Enter Your Email Address">
+                <button type="submit" class="btn btn-dark">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const today = new Date();
+
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        const formattedDate = today.toLocaleDateString('en-US', options);
+
+// Get all divs with the class name 'date'
+        const dateDivs = document.querySelectorAll('.date');
+
+        // Loop through each div and set the innerHTML to the formatted date
+        dateDivs.forEach(div => {
+            div.innerHTML = formattedDate;
+        });
+
+
+        // Handle contact form submission
+        $('#contactForm').on('submit', function(event) {
+            event.preventDefault();
+            alert("Message sent successfully!");
+        });
+
+        // Handle newsletter form submission
+        $('#newsletterForm').on('submit', function(event) {
+            event.preventDefault();
+            alert("Subscribed to newsletter!");
+        });
+    </script>
+</body>
+</html>
