@@ -72,11 +72,11 @@
         }
     </style>
 </head>
-<body class="position-relative">
+<body class="position-relative" style="overflow-x: hidden;">
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-black position-sticky sticky-top">
     <!-- Container wrapper -->
-    <div class="container-fluid">
+    <div class="container">
       <!-- Toggle button -->
       <button
         data-mdb-collapse-init
@@ -140,23 +140,8 @@
             role="button"
             aria-expanded="false"
           >
-            <i class="fas fa-bell"></i>
-            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+            <button class="btn btn-outline-light">Signin</button>
           </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">Some news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Another news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
         </div>
         <!-- Avatar -->
         <div class="dropdown">
@@ -168,28 +153,8 @@
             role="button"
             aria-expanded="false"
           >
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-              class="rounded-circle"
-              height="25"
-              alt="Black and White Portrait of a Man"
-              loading="lazy"
-            />
+            <button class="btn btn-danger">Create Free Account</button>
           </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuAvatar"
-          >
-            <li>
-              <a class="dropdown-item" href="#">My profile</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Settings</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Logout</a>
-            </li>
-          </ul>
         </div>
       </div>
       <!-- Right elements -->
@@ -200,10 +165,14 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <h1>Welcome to the Ultimate Cricket Championship 2024!</h1>
-            <p class="opacity-80">The most exciting cricket tournament of the year is here! Get ready to witness action-packed matches, star players, and unforgettable moments.</p>
-            <a href="#schedule" class="btn btn-lg btn-rounded text-white fw-bold" style="background-color: rgb(233, 43, 52);">Visit</a>
+        <div class="container text-start">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="fw-bolder fs-1">Welcome to the Ultimate Cricket Championship 2024!</div>
+                <p class="opacity-80 my-3">The most exciting cricket tournament of the year is here! Get ready to witness action-packed matches, star players, and unforgettable moments.</p>
+                <a href="#schedule" class="btn btn-lg btn-rounded text-white fw-bold" style="background-color: rgb(233, 43, 52);">Visit</a></div>
+              <div class="col-lg-4"></div>
+            </div>
         </div>
     </section>
 
@@ -293,7 +262,7 @@
 
     <!-- Team Profiles -->
     <section class="teams p-lg-5 py-2" id="teams">
-        <div class="container-fluid">
+        <div class="container">
             <div class="text-black">Our Articles</div>
             <h3 class="text-black fw-bold">Trending Now</h3>
 
@@ -467,6 +436,13 @@
           <div class="col-lg-3 col-6 text-center"><div class="card p-2 shadow-0"><div style="font-size: medium;">Trophies</div><div class="fs-1 fw-bold">284</div></div></div>
         </div>
       </section>
+
+      <!-- Experience Section -->
+     <section>
+      <div class="bg-image" style="background-image: url('Images/500x300_1097547-untitleddesign10.webp'); height: 300px;">
+dsdsd
+      </div>
+     </section>
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -488,13 +464,6 @@
             </form>
         </div>
     </section>
-
-    <!-- Experience Section -->
-     <section>
-      <div class="bg-image" style="background-image: url('Images/500x300_1097547-untitleddesign10.webp'); height: 300px;">
-dsdsd
-      </div>
-     </section>
 
     <!-- Newsletter Section -->
     <section class="newsletter">
