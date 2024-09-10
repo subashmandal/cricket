@@ -44,18 +44,9 @@
             font-size: 4rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2rem;
-        }
         .schedule {
             background-color: #f5f5f5;
             padding: 60px 0;
-        }
-
-        .team-profile img {
-            border-radius: 50%;
         }
         .contact {
             background-color: #004D40;
@@ -69,6 +60,15 @@
         }
         .nav-link{
             color: white;
+        }
+        .truncate-text{
+          display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+    line-height: 1.5;      /* Optional: Adjust line height */
+    max-height: 3em;
         }
     </style>
 </head>
@@ -210,62 +210,263 @@
     <!-- Scorecards -->
     <section class="schedule" id="schedule">
         <div class="container">
-            <div class="row d-flex scrol">
-                <div class="col-4 card text-center p-3">
+            <div class="d-flex" style="white-space: nowrap; overflow-x: auto; scroll-behavior: smooth;">
+                <div class="col-4 card text-center p-3 me-1">
                     <div class="date" style="font-size: small;"></div>
-                    <div class="row">
-                        <div class="col-3">
+                    <div class="row py-3">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
                             <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
                         </div>
-                        <div class="col-6">
-                            <div class="fw-bold">117 - 106</b>
+                        <div class="col-6 text-center d-flex justify-content-center align-items-center">
+                            <div>
+                              <h2 class="fw-bold text-black">117 - 106</h2>
+                            <div class="fw-light text-black">Premier League</div>
+                            <div class="fw-lighter" style="font-size: small;">Hyderabad</div>
+                            </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 d-flex align-items-center justify-content-center">
                             <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
                         </div>
+                      </div>
+                  </div>
+                <!-- 2nd card -->
+                <div class="col-4 card text-center p-3 me-1">
+                  <div class="date" style="font-size: small;"></div>
+                  <div class="row py-3">
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
+                      <div class="col-6 text-center d-flex justify-content-center align-items-center">
+                          <div>
+                            <h2 class="fw-bold text-black">117 - 106</h2>
+                          <div class="fw-light text-black">Premier League</div>
+                          <div class="fw-lighter" style="font-size: small;">Hyderabad</div>
+                          </div>
+                      </div>
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
                     </div>
                 </div>
-                <div class="col-4 card text-center p-3">
-                    <div class="date" style="font-size: small;"></div>
-                    <div class="row">
-                        <div class="col-4">
-                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
-                        </div>
-                        <div class="col-4">
-                            <p>117 - 106</p>
-                        </div>
-                        <div class="col-4">
-                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
-                        </div>
+                <!-- 3rd card -->
+                <div class="col-4 card text-center p-3 me-1">
+                  <div class="date" style="font-size: small;"></div>
+                  <div class="row py-3">
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
+                      <div class="col-6 text-center d-flex justify-content-center align-items-center">
+                          <div>
+                            <h2 class="fw-bold text-black">117 - 106</h2>
+                          <div class="fw-light text-black">Premier League</div>
+                          <div class="fw-lighter" style="font-size: small;">Hyderabad</div>
+                          </div>
+                      </div>
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
                     </div>
                 </div>
-                <!-- Add more match cards as needed -->
-            </div>
+                <!-- 4th card -->
+                <div class="col-4 card text-center p-3 me-1">
+                  <div class="date" style="font-size: small;"></div>
+                  <div class="row py-3">
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
+                      <div class="col-6 text-center d-flex justify-content-center align-items-center">
+                          <div>
+                            <h2 class="fw-bold text-black">117 - 106</h2>
+                          <div class="fw-light text-black">Premier League</div>
+                          <div class="fw-lighter" style="font-size: small;">Hyderabad</div>
+                          </div>
+                      </div>
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
+                    </div>
+                </div>
+                <!-- 5th card -->
+              </div>
         </div>
     </section>
 
     <!-- Team Profiles -->
-    <section class="teams" id="teams">
-        <div class="container">
-            <h2 class="section-title">Our Main Team</h2>
+    <section class="teams p-lg-5 py-2" id="teams">
+        <div class="container-fluid">
+            <div class="text-black">Our Articles</div>
+            <h3 class="text-black fw-bold">Trending Now</h3>
+
             <div class="row">
-                <div class="col-md-3">
-                    <div class="team-profile text-center">
-                        <img src="player1.jpg" class="img-fluid" alt="Player 1" style="width: 150px;">
-                        <h5>Player Name</h5>
+                <div class="col-md-6">
+                  <div class="row">
+                    <div class="col-lg-12 col-3 bg-image rounded" style="background-image: url('Images/yB4gParKbz.webp'); height: 400px;" >
+                        
+                    </div>
+                    <div class="col-lg-12 col-9 text-black">
+                      <div class="row py-2">
+                        <div class="col-2 text-center d-flex align-items-center justify-content-center" style="line-height: 160%;">
+                          <div>
+                            <div class="fw-bold fs-1">10</div>
+                            <div>Sept</div>
+                          </div>
+                        </div>
+                        <div class="col-10">
+                          <div class="fs-2 fw-bold lh-1">The third team to win back to back tournament</div>
+                          <p class="opacity-80 lh-sm mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid aliquam cupiditate architecto libero ex delectus?</p>
+                        </div>
+                      </div>
+                  </div>
+                  </div>
+                    
+                </div>
+                <div class="col-md-6 text-black">
+                    <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                        <img src="Images/images (1).jpeg" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
+                        <div class="p-2">
+                          <div>
+                            <div class="fs-2 fw-bold lh-1 truncate-text pb-3">The third team to win back to back tournament</div>
+                            <span style="line-height: 0.4;">
+                              <div class="text-uppercase fw-bold">Championship</div>
+                            <small class="date"></small>
+                            </span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                      <img src="Images/500x300_1097547-untitleddesign10.webp" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
+                      <div class="p-2">
+                        <div>
+                          <div class="fs-2 fw-bold lh-1 truncate-text pb-3">The third team to win back to back tournament</div>
+                          <span style="line-height: 0.4;">
+                            <div class="text-uppercase fw-bold">Championship</div>
+                          <small class="date"></small>
+                          </span>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                    <img src="Images/yB4gParKbz.webp" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
+                    <div class="p-2">
+                      <div>
+                        <div class="fs-2 fw-bold lh-1 truncate-text pb-3">The third team to win back to back tournament</div>
+                        <span style="line-height: 0.4;">
+                          <div class="text-uppercase fw-bold">Championship</div>
+                        <small class="date"></small>
+                        </span>
+                      </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="team-profile text-center">
-                        <img src="player2.jpg" class="img-fluid" alt="Player 2" style="width: 150px;">
-                        <h5>Player Name</h5>
+                <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                  <img src="Images/images (2).jpeg" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
+                  <div class="p-2">
+                    <div>
+                      <div class="fs-2 fw-bold lh-1 truncate-text pb-3">The third team to win back to back tournament</div>
+                      <span style="line-height: 0.4;">
+                        <div class="text-uppercase fw-bold">Championship</div>
+                      <small class="date"></small>
+                      </span>
                     </div>
-                </div>
-                <!-- Add more player profiles -->
+                  </div>
+              </div>
             </div>
+          </div>
         </div>
     </section>
 
+    <!-- Premier league section -->
+     <section class="premierLeague py-lg-5 py-2 text-black text-center" style="background-color: #f5f5f5;">
+      <div class="fs-1 fw-bold">Premier League</div>
+      <div class="container table-responsive">
+        <table class="table align-middle mb-0 bg-white">
+          <thead class="bg-light">
+            <tr>
+              <th>Position</th>
+              <th>Team</th>
+              <th>R</th>
+              <th>E</th>
+              <th>W</th>
+              <th>L</th>
+              <th>P</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img
+                      src="Images/logos/Creative Cricket Logo Png, Transparent Png , Transparent Png Image - PNGitem.jpeg"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                      class="rounded-circle"
+                      />
+                  <div class="ms-3">
+                    <p class="fw-bold mb-1">Team A</p>
+                  </div>
+                </div>
+              </td>
+              <td>4</td>
+              <td>7</td>
+              <td>15</td>
+              <td>34</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img
+                      src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                      class="rounded-circle"
+                      />
+                  <div class="ms-3">
+                    <p class="fw-bold mb-1">Team B</p>
+                  </div>
+                </div>
+              </td>
+              <td>4</td>
+              <td>7</td>
+              <td>15</td>
+              <td>34</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img
+                      src="Images/logos/Cricket League Logo, Cricket Team Logo Transparent, Cricket Tornament Cricket League Logo 2023, Cricket Ball PNG Transparent Clipart Image and PSD File for Free Download.jpeg"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                      class="rounded-circle"
+                      />
+                  <div class="ms-3">
+                    <p class="fw-bold mb-1">Team C</p>
+                  </div>
+                </div>
+              </td>
+              <td>4</td>
+              <td>7</td>
+              <td>15</td>
+              <td>34</td>
+              <td>34</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     </section>
+     <!-- Match Section -->
+      <section>
+        <div class="row py-lg-5 py-2">
+          <div class="col-lg-3 col-6 text-center"><div class="card p-2 shadow-0"><div style="font-size: medium;">People</div><div class="fs-1 fw-bold">346+</div></div></div>
+          <div class="col-lg-3 col-6 text-center"><div class="card p-2 shadow-0"><div style="font-size: medium;">matches</div><div class="fs-1 fw-bold">4873</div></div></div>
+          <div class="col-lg-3 col-6 text-center"><div class="card p-2 shadow-0"><div style="font-size: medium;">Years</div><div class="fs-1 fw-bold">19+</div></div></div>
+          <div class="col-lg-3 col-6 text-center"><div class="card p-2 shadow-0"><div style="font-size: medium;">Trophies</div><div class="fs-1 fw-bold">284</div></div></div>
+        </div>
+      </section>
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -287,6 +488,13 @@
             </form>
         </div>
     </section>
+
+    <!-- Experience Section -->
+     <section>
+      <div class="bg-image" style="background-image: url('Images/500x300_1097547-untitleddesign10.webp'); height: 300px;">
+dsdsd
+      </div>
+     </section>
 
     <!-- Newsletter Section -->
     <section class="newsletter">
