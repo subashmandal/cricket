@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
         <!-- Standard favicon -->
         <link rel="icon" type="image/png" href="../Images/favicon_io/favicon-16x16.png" sizes="16x16">
 
@@ -28,25 +32,37 @@
         <script src="../js/mdb.min.js"></script>
         <link rel="stylesheet" href="../plugins/css/all.min.css" />
 <script type="text/javascript" src="../plugins/js/all.min.js"></script>
+<style>
+  input::placeholder {
+            color: black !important; /* Change this to the color you want */
+            opacity: 0.7;  /* Ensure placeholder is fully visible */
+        }
+  .form-control{
+    color: black !important;
+  }
+</style>
 </head>
 <body>
-    <section class="vh-100" style="background-color: #508bfc;">
+    <section class="vh-100 bg-image" style="background-image: url('../Images/login.jpg'); ">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                <div class="card-body p-5 text-center">
+              <div class="card shadow-2-strong" style="border-radius: 1rem; background-color: rgba(145, 197, 161, 0.9);">
+                <div class="card-body p-5 text-center text-black">
       
-                  <h3 class="mb-5">Sign in</h3>
+                  <h3 class="mb-5 fw-bold">Sign in</h3>
       
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-                    <label class="form-label" for="typeEmailX-2">Email</label>
+                  
+                  <div class="mb-3">
+                    <div class="form-helper text-start text-black">Email</div>
+                    <input type="email" id="email" placeholder="Enter Email Id" class="form-control" />
+                    <small id="emailError" class="text-danger"></small>
                   </div>
       
-                  <div data-mdb-input-init class="form-outline mb-4">
-                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
-                    <label class="form-label" for="typePasswordX-2">Password</label>
+                  <div class="mb-3">
+                    <div class="form-helper text-start text-black">Password</div>
+                    <input type="password" id="password" placeholder="Enter Password" class="form-control" />
+                    <small id="passwordError" class="text-danger"></small>
                   </div>
       
                   <!-- Checkbox -->
@@ -55,14 +71,13 @@
                     <label class="form-check-label" for="form1Example3"> Remember password </label>
                   </div>
       
-                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                  <button id="loginBtn" class="btn btn-success" type="submit">Login</button>
       
-                  <hr class="my-4">
+                  <hr class="my-4 text-white">
       
-                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
-                    type="submit"><i class="fab fa-google me-2"></i> Sign in with google</button>
-                  <button data-mdb-button-init data-mdb-ripple-init class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
-                    type="submit"><i class="fab fa-facebook-f me-2"></i>Sign in with facebook</button>
+                  <button class="btn btn-lg btn-block btn-light text-capitalize shadow-0" type="submit"><img src="../Images/icons/google.png" height="20" class="me-2" alt=""> Continue with google</button>
+                  <button class="btn btn-lg btn-block btn-light text-capitalize mb-2 shadow-0"
+                    type="submit"><img src="../Images/icons/facebook.png" height="20" class="me-2" alt="" srcset="">Continue with facebook</button>
       
                 </div>
               </div>
@@ -70,5 +85,66 @@
           </div>
         </div>
       </section>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+      <script>
+        // Function to validate email
+        function validateEmail(email) {
+            const re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            return re.test(String(email).toLowerCase());
+        }
+
+        // Handle login button click
+        $('#loginBtn').click(function(event) {
+            event.preventDefault();
+
+            // Get values
+            const email = $('#email').val();
+            const password = $('#password').val();
+
+            // Clear previous errors
+            $('#emailError').text('');
+            $('#passwordError').text('');
+
+            let isValid = true;
+
+            // Validate email
+            if (!validateEmail(email)) {
+                $('#emailError').text('Please enter a valid email address');
+                isValid = false;
+            }
+
+            // Validate password
+            if (password.length < 6) {
+                $('#passwordError').text('Password must be at least 6 characters long');
+                isValid = false;
+            }
+
+            if (isValid) {
+                // AJAX request
+                $.ajax({
+                    url: 'your-backend-login-endpoint.php', // Replace with your server login endpoint
+                    type: 'POST',
+                    data: {
+                        email: email,
+                        password: password
+                    },
+                    success: function(response) {
+                        // Process response from the server
+                        if (response.success) {
+                            alert('Login successful');
+                            window.location.href = 'dashboard.html'; // Redirect to a dashboard or another page
+                        } else {
+                            alert(response.message); // Show error message
+                        }
+                    },
+                    error: function(error) {
+                        console.log(error);
+                        alert('Error during login');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

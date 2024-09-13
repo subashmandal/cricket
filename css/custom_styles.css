@@ -1,0 +1,598 @@
+<head>
+<style>
+    /* The sidebar menu */
+.sidebar {
+    height: 100%!important; /* Full-height: remove this if you want "auto" height */
+    width: 0px!important; /* Set the width of the sidebar */
+    position: fixed!important; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1!important; /* Stay on top */
+    top: 0!important; /* Stay at the top */
+    right: 0!important;
+    background-color: <?php echo $backgroundColorRed2 ?>!important; /* Black */
+    overflow-x: hidden!important; /* Disable horizontal scroll */
+    padding-top: 60px!important; /* Place content 60px from the top */
+    transition: 0.5s!important; /* 0.5 second transition effect to slide in the sidebar */
+    border-left: 1px solid <?php echo $strokeColor ?>!important;
+}
+
+/* The sidebar links */
+.sidebar a {
+    padding: 8px 8px 8px 32px!important;
+    text-decoration: none!important;
+    font-size: 20px!important;
+    color: #818181!important;
+    display: block!important;
+    transition: 0.3s!important;
+}
+
+/* Style for the theme-icon container */
+.theme-icon {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    height: 100%; /* Take full height of the parent */
+}
+
+/* Style for the icons */
+.icon-size {
+    font-size: 20px; /* Adjust as needed */
+}
+
+#theme-toggle-mobile {
+    font-size: 22px; /* Slightly larger to match the logout icon */
+}
+
+/* Target the label wrapping the switch specifically */
+.form-check.form-switch label > input[type="checkbox"]:checked + span::before {
+    background-color: #D23737 !important; /* for the toggle track */
+}
+
+.form-check.form-switch label > input[type="checkbox"]:checked + span::after {
+    background-color: white !important; /* for the toggle button/circle */
+}
+
+.form-check-input[type=checkbox]:checked {
+    background-color: #D23737 !important;
+    background-image: none !important;
+    border-color: #D23737;
+}
+
+.form-check-input:checked {
+    border-color: #D23737;
+}
+
+.form-switch .form-check-input:checked, .form-switch .form-check-input:checked:focus {
+    background-image: none;
+    background-image: none !important;
+}
+
+.form-check.form-switch label > input[type="checkbox"]:checked + span::after {
+    background-color: white !important; /* the color you want for the circle */
+    border-color: #D23737 !important; /* if the circle has a border, we set it to #D23737 */
+}
+
+.form-switch .form-check-input:checked[type=checkbox]:after {
+    background-color: #D23737;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+    color: <?php echo $strokeColor ?>!important;
+}
+/* Override default checkbox color when checked */
+#anonymousCheck:checked {
+    background-color: #D23737;
+    border-color: #D23737;
+}
+
+/* Handle the focus ring when the checkbox is focused */
+#anonymousCheck:focus {
+    box-shadow: 0 0 0 0.25rem rgba(205,55,55, 0.5);
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none; /* for good measure */
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+    position: absolute!important;
+    top: 0!important;
+    right: 25px!important;
+    font-size: 36px!important;
+    margin-left: 50px!important;
+}
+/* Style for sidebar footer */
+.sidebar-footer {
+    position: absolute!important;
+    bottom: 50px!important;
+    width: 100%!important;
+    padding: 10px!important;
+    background-color: <?php echo $backgroundColorRed2 ?>!important; /* Same as sidebar color */
+    color: <?php echo $p_color ?>!important;
+    box-sizing: border-box!important;
+}
+
+.logo-container {
+    width: 180px;
+    height: 40px;
+    background-size: contain; /* Ensures the logo fits within the container */
+    background-repeat: no-repeat; /* Prevents repeating of the background image */
+    background-position: center; /* Centers the background image */
+}
+
+/* Desktop logo */
+@media screen and (min-width: 992px) {
+    .logo-container {
+    <?php  if(isset($_SESSION['user_emailID'])){?>
+    background-image: url(<?php echo $logo_image; ?>)!important;
+    <?php }else{?>
+     background-image: url(<?php echo $logo_image; ?>)!important;
+    <?php } ?>
+    }
+}
+
+/* Mobile logo */
+@media screen and (max-width: 991px) {
+    .logo-container {
+    <?php  if(isset($_SESSION['user_emailID'])){?>
+    height: 40px !important;
+    width: 40px !important;
+    background-image: url(<?php echo $mobile_image; ?>)!important;
+    <?php }else{?>
+               height: 40px !important;
+               background-image: url(<?php echo $logo_image; ?>)!important;
+               <?php } ?>
+    }
+}
+
+.bottom_nav_icon{
+    font-size: 20px;
+}
+.search-container input[type="text"]:focus {
+    border-color: <?php echo $strokeColor ?>; /* New border color when focused */
+    outline: none;
+    box-shadow: none; /* Removes any box-shadow */
+    /* Other focus styles if needed */
+}
+.search-container input[type="text"] {
+    background-color: <?php echo $backgroundColorRed ?>;
+    border: 1px solid <?php echo $strokeColor ?>; /* Default border color */
+    border-radius: 7px; /* Rounded corners as per 'rounded-7' class */
+    outline: none!important;
+    box-shadow: none; /* Removes any box-shadow */
+    /* Additional styles if needed */
+}
+.search-container {
+    flex-grow: 1; /* Container takes up available space */
+    margin: 0 8px; /* Adjust margin as needed */
+    outline: none!important;
+    box-shadow: none; /* Removes any box-shadow */
+    position: relative; /* This makes it a positioning context for absolute children */
+    flex-grow: 1;
+    margin: 0 8px;
+}
+/* Style for the dropdown menu */
+#live-search-results {
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioned absolutely within the search-container */
+    top: 100%; /* Positioned just below the input field */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stacks above other content */
+    /* Additional styling for the dropdown (width, background, etc.) */
+}
+.dropdown-item{
+    color:<?php echo $p_color ?>;
+    background-color:<?php echo $backgroundColorRed2 ?>;
+}
+.dropdown-item:hover{
+    color:<?php echo $p_color ?>;
+    background-color:<?php echo $backgroundColorRed ?>;
+}
+.dropdown-menu{
+    /* min-height: 40vh; */
+    /* padding: 20px; */
+    background-color: <?php echo $backgroundColorRed ?>;
+    color: <?php echo $p_color ?>!important;
+    border:1px solid <?php echo $strokeColor ?>;
+    display: none; /* Initially hidden */
+    position: absolute; /* Positioned absolutely within the search-container */
+    top: 100%; /* Positioned just below the input field */
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures it stacks above other content */
+    border-radius: 40px solid <?php echo $strokeColor ?>!important;
+    border-top-left-radius: 0; /* Top left border radius set to 0 */
+    border-top-right-radius: 0; /* Top right border radius set to 0 */
+    /* Other styling such as border, background, width, etc. */
+}
+
+.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+
+.search-container {
+    /* other styles... */
+    position: relative; /* Set the position context for the absolute positioning of the search icon */
+}
+
+#live-search-input {
+    padding-right: 2.5rem; /* Make room for the icon inside the input */
+    /* other styles... */
+}
+
+.search-icon-button {
+    position: absolute; /* Position the button over the input field */
+    right: 0; /* Align to the right side of the input field */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Align perfectly in the center */
+    border: none; /* Remove border */
+    background: transparent; /* Transparent background */
+    color: inherit; /* Inherit text color from parent */
+    cursor: pointer; /* Change cursor*/
+}
+/* Custom Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center; /* Aligns items vertically */
+    flex-wrap: nowrap;   /* Prevents wrapping of navbar items */
+}
+
+.search-container {
+    flex-grow: 1; /* Allows the search bar to grow */
+    min-width: 100px; /* Minimum width of the search bar */
+}
+
+/* Adjusting padding and margins as necessary */
+.nav-item, .navbar-brand, .profile-pic-button {
+    margin-right: 10px; /* Adjust as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .search-container input {
+        /* Reduce padding or font-size for smaller screens */
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .search-container {
+        /* Adjust the size of the search bar specifically for tablets */
+        flex-grow: 1;
+        min-width: 200px; /* Example min-width, adjust as needed */
+    }
+
+    /* Further adjustments for other navbar elements if needed */
+    .nav-item, .navbar-brand, .profile-pic-button {
+        margin-right: 15px; /* Adjust spacing for tablet view */
+    }
+
+    /* Other specific styles for tablet view */
+}
+.btn {
+    --bs-btn-active-color: unset !important;
+    --bs-btn-active-bg: unset !important;
+    --bs-btn-active-border-color: unset !important;
+}
+a,button{
+    --bs-btn-active-color: unset !important;
+    --bs-btn-active-bg: unset !important;
+    --bs-btn-active-border-color: unset !important;
+}
+.modal-content{
+    background-color: <?php echo $backgroundColorRed ?>!important;
+    color: <?php echo $p_color ?>!important;
+}
+.btn-primary {
+    background-color: <?php echo $ColorRed ?>!important;
+    color: <?php echo $ColorWhite ?>!important;
+    box-shadow: none!important;
+}
+
+.btn-primary:hover {
+    background-color: #FF5353 !important;
+    color: <?php echo $ColorWhite ?>!important;
+    box-shadow: none !important;
+}
+
+.btn-primary:active {
+    background-color: rgb(125, 23, 16) !important;
+    color: <?php echo $ColorWhite ?>!important;
+    box-shadow: none !important;
+}
+
+.btn-primary:disabled {
+    background-color: rgb(125, 23, 16) !important;
+    color: <?php echo $ColorWhite ?>!important;
+    box-shadow: none !important;
+}
+
+.btn-primary:focus {
+    outline: none !important;
+    background-color: <?php echo $ColorRed ?>!important;
+    color: <?php echo $ColorWhite ?>!important;
+    box-shadow: none !important;
+}
+
+.btn-secondary {
+    background-color: #E0E0E0 !important; /* Light gray background */
+    color: #333333 !important; /* Darker text for contrast */
+    border: 1px solid #CCCCCC; /* Slightly darker border for definition */
+    box-shadow: none !important;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.btn-secondary:hover {
+    background-color: #CCCCCC !important; /* Slightly darker on hover */
+    color: #000000 !important; /* Black text on hover for contrast */
+    border-color: #BBBBBB; /* Darker border on hover */
+}
+
+.btn-secondary:active {
+    background-color: #B0B0B0 !important; /* Even darker when active */
+    color: #000000 !important;
+    border-color: #AAAAAA;
+}
+.blog-post{
+    background-color: <?php echo $backgroundColorRed ?>!important;
+    color: <?php echo $p_color ?>!important;
+}
+
+.btn-secondary:focus {
+    outline: none !important;
+    background-color: #E0E0E0 !important;
+    color: #333333 !important;
+    border-color: #CCCCCC;
+    box-shadow: none !important;
+}
+
+.btn-transparent{
+    background-color:<?php echo $backgroundColorRed ?>!important;
+    color:<?php echo $p_color ?>!important;
+    padding:0px!important;
+    font-size:30px!important;
+}
+.card{
+    color: <?php echo $p_color ?>!important;
+    background-color: <?php echo $backgroundColorRed ?>; /* Slightly lighter card bg for contrast */
+    border: 0.4px solid<?php echo $strokeColor ?>;
+}
+
+.card-header{
+    background-color: <?php echo $backgroundColorRed ?>!important;
+    border-bottom: 1px solid <?php echo $strokeColor ?>!important;
+}
+.card-footer{
+    background-color: <?php echo $backgroundColorRed ?>!important;
+}
+/* Dynamic color for .nav_button */
+.nav_button {
+    color: <?php echo $p_color; ?>;
+}
+
+/* Hover state with important to override other styles */
+.nav_button:hover {
+    color: <?php echo $ColorRed; ?> !important;
+    text-decoration: none !important;
+}
+.nav-link:hover{
+    text-decoration: none !important;
+    text-underline: transparent !important;
+}
+
+a{
+    color: <?php echo $p_color ?>!important;
+}
+a:hover{
+    text-decoration: underline;
+    color: <?php echo $p_color ?>!important;
+}
+.read-more{
+    color: <?php echo $meta_text ?>!important;
+    text-decoration: underline !important;
+}
+.read-less{
+    color: <?php echo $meta_text ?>!important;
+    text-decoration: underline !important;
+}
+read-more:hover{
+    color: <?php echo $ColorRed ?>!important;
+    text-decoration: underline !important;
+}
+.read-less:hover{
+    color: <?php echo $ColorRed ?>!important;
+    text-decoration: underline !important;
+}
+hr{
+    border: 1px solid <?php echo $strokeColor ?>!important;
+}
+.card-footer{
+    border: 0px;
+    background-color: <?php  echo $backgroundColorRed ?>;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: <?php echo $bodyBackground ?>; /* Dark background color */
+    font-family: 'Rubik', sans-serif!important;
+}
+
+body,h1,h2,h3,h4,h5,p,button{
+    font-family: 'Rubik', sans-serif!important;
+}
+
+.agree-count {
+    cursor: pointer; /* Changes the cursor to a pointer */
+    text-decoration: none; /* Ensures text is not underlined by default */
+}
+
+.agree-count:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    color:<?php echo $ColorRed ?>
+}
+
+.navbar_container{
+    background-color: <?php  echo $backgroundColorRed ?>;
+}
+.rounded-pill{
+    color:<?php echo $p_color ?>;
+    background-color:<?php echo $backgroundColorRed2 ?>;
+}
+.meta_text{
+    color: <?php echo $meta_text ?>!important;
+}
+.agree-button{
+    color: <?php echo $meta_text ?>!important;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    display: none; /* for good measure */
+}
+.loading-placeholder {
+    animation: loadingShimmer 1.5s infinite linear;
+    background: linear-gradient(to right, <?php echo $meta_text ?> 8%, <?php echo $strokeColor ?> 18%, <?php echo $strokeColor ?> 83%);
+    background-size: 1000px 104px;
+    position: relative;
+    border-radius: 10px;
+}
+.rounded-circle{
+    width:40px;
+    height:40px;
+    object-fit: cover;
+}
+.short-version{
+    <?php echo $p_color ?>!important;
+}
+
+.blog-card {
+    border-radius: 10px;
+    box-shadow: 1px 4px 10px rgba(1, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: <?php echo $backgroundColorRed ?>;
+}
+
+.blog-card img.profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.blog-card .metadata {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.blog-card .metadata span {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.blog-card .metadata .material-icons {
+    font-size: 1.2rem;
+}
+
+.blog-card .actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+    padding-bottom:0px!important;
+    margin-bottom: 0px;
+}
+
+.blog-card .hashtags {
+    padding: 0.5rem 0;
+    color: <?php echo $strokeColor ?>!important;
+}
+.modal-header{
+    border-bottom: 1px solid <?php echo $strokeColor ?>!important
+}
+.blog-card .hashtags a {
+    text-decoration: none;
+    color: #007bff;
+}
+.btn-side-nav {
+    color: grey;
+}
+/* The sidebar (hidden by default) */
+.right-sidebar {
+    height: 100%;
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed;
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: <?php echo $backgroundColorRed ?>; /* Black */
+    color: <?php echo $p_color ?>;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide out the sidebar */
+    padding-top: 60px; /* Place content 60px from the top */
+}
+
+/* The close button */
+.right-sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+
+.name-and-role {
+    text-align: left;
+    margin-top: 0; /* Remove top margin to align properly */
+}
+
+.sidebar-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-links ul li a {
+    text-decoration: none;
+    color: #007bff; /* Adjust link color as needed */
+}
+
+.sidebar-links ul li a:hover {
+    text-decoration: underline;
+}
+.full-width-link {
+    display: block;
+    text-align: left;
+    padding: 8px 16px; /* Adjust padding as needed */
+    text-decoration: none;
+    color: inherit; /* Inherit font color */
+    border-bottom: 1px solid <?php echo $strokeColor ?>; /* Optional: border for each item */
+}
+
+.full-width-link a {
+    display: block; /* Make the anchor tag fill the li element */
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color from the li element */
+}
+
+.full-width-link:hover {
+    background-color: <?php echo $backgroundColorRed2 ?>; /* Change background color on hover */
+    cursor: pointer;
+}
+
+</style>
+  </head>
