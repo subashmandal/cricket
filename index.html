@@ -32,7 +32,7 @@
         }
         .hero {
             background: url('Images/img1.png') no-repeat center center/cover;
-            height: 100vh;
+            height: 120vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -70,6 +70,54 @@
     line-height: 1.5;      /* Optional: Adjust line height */
     max-height: 3em;
         }
+        @keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 1260px;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 30s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+.news:hover{
+  background-color:azure;
+  cursor: pointer;
+}
+
     </style>
 </head>
 <body class="position-relative" style="overflow-x: hidden;">
@@ -164,7 +212,7 @@
   <!-- Navbar -->
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero pt-5" id="home">
         <div class="container text-start">
             <div class="row">
               <div class="col-lg-8">
@@ -178,13 +226,13 @@
 
     <!-- Scorecards -->
     <section class="schedule" id="schedule">
-        <div class="container">
-            <div class="d-flex" style="white-space: nowrap; overflow-x: auto; scroll-behavior: smooth;">
-                <div class="col-4 card text-center p-3 me-1">
+        <div class="container-fluid">
+            <div class="d-flex schedule-scroll" style="white-space: nowrap; overflow-x: auto; scroll-behavior: smooth;">
+                <div class="col-3 card text-center p-3 me-2">
                     <div class="date" style="font-size: small;"></div>
                     <div class="row py-3">
                         <div class="col-3 d-flex align-items-center justify-content-center">
-                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                            <img src="Images/logos/Cricket League Logo, Cricket Team Logo Transparent, Cricket Tornament Cricket League Logo 2023, Cricket Ball PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
                         </div>
                         <div class="col-6 text-center d-flex justify-content-center align-items-center">
                             <div>
@@ -194,12 +242,12 @@
                             </div>
                         </div>
                         <div class="col-3 d-flex align-items-center justify-content-center">
-                            <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                            <img src="Images/logos/Cricket Logo, Cricket Team Logo Transparent, Cricket Tornament Logo, Cricket League Logo PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
                         </div>
                       </div>
                   </div>
                 <!-- 2nd card -->
-                <div class="col-4 card text-center p-3 me-1">
+                <div class="col-3 card text-center p-3 me-2">
                   <div class="date" style="font-size: small;"></div>
                   <div class="row py-3">
                       <div class="col-3 d-flex align-items-center justify-content-center">
@@ -213,16 +261,16 @@
                           </div>
                       </div>
                       <div class="col-3 d-flex align-items-center justify-content-center">
-                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                          <img src="Images/logos/Creative Cricket Logo Png, Transparent Png , Transparent Png Image - PNGitem.jpeg" height="75" alt="logos" srcset="">
                       </div>
                     </div>
                 </div>
                 <!-- 3rd card -->
-                <div class="col-4 card text-center p-3 me-1">
+                <div class="col-3 card text-center p-3 me-2">
                   <div class="date" style="font-size: small;"></div>
                   <div class="row py-3">
                       <div class="col-3 d-flex align-items-center justify-content-center">
-                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                          <img src="Images/logos/Multan Sultan Logo, Cricket League Logo Transparent, Psl Team Logo 2023, Cricket PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
                       </div>
                       <div class="col-6 text-center d-flex justify-content-center align-items-center">
                           <div>
@@ -232,16 +280,16 @@
                           </div>
                       </div>
                       <div class="col-3 d-flex align-items-center justify-content-center">
-                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                          <img src="Images/logos/Sports Cricket Logo PNG Images _ PSD Free Download - Pikbest.jpeg" height="75" alt="logos" srcset="">
                       </div>
                     </div>
                 </div>
                 <!-- 4th card -->
-                <div class="col-4 card text-center p-3 me-1">
+                <div class="col-3 card text-center p-3 me-2">
                   <div class="date" style="font-size: small;"></div>
                   <div class="row py-3">
                       <div class="col-3 d-flex align-items-center justify-content-center">
-                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                          <img src="Images/logos/Cricket Tornament Logo, Cricket Team Logo Transparent, Cricket Logo 202, Cricket Ball PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
                       </div>
                       <div class="col-6 text-center d-flex justify-content-center align-items-center">
                           <div>
@@ -251,11 +299,29 @@
                           </div>
                       </div>
                       <div class="col-3 d-flex align-items-center justify-content-center">
-                          <img src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg" height="75" alt="logos" srcset="">
+                          <img src="Images/logos/Cricket Tournament PNG Transparent, Red Brush Watercolor Cricket Tournament, Red, Brush, Watercolor PNG Image For Free Download.jpeg" height="75" alt="logos" srcset="">
                       </div>
                     </div>
                 </div>
                 <!-- 5th card -->
+                <div class="col-3 card text-center p-3 me-2">
+                  <div class="date" style="font-size: small;"></div>
+                  <div class="row py-3">
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Cricket Tournament White Transparent, Colorful Brush Watercolor Cricket Tournament, Dazzling, Brush, Watercolor PNG Image For Free Download.jpeg" height="75" alt="logos" srcset="">
+                      </div>
+                      <div class="col-6 text-center d-flex justify-content-center align-items-center">
+                          <div>
+                            <h2 class="fw-bold text-black">117 - 106</h2>
+                          <div class="fw-light text-black">Premier League</div>
+                          <div class="fw-lighter" style="font-size: small;">Hyderabad</div>
+                          </div>
+                      </div>
+                      <div class="col-3 d-flex align-items-center justify-content-center">
+                          <img src="Images/logos/Download Cricket Team vector logo design_ Cricket championship logo. modern sport emblem. vector illustration. for free" height="75" alt="logos" srcset="">
+                      </div>
+                    </div>
+                </div>
               </div>
         </div>
     </section>
@@ -268,8 +334,8 @@
 
             <div class="row">
                 <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-lg-12 col-3 bg-image rounded" style="background-image: url('Images/yB4gParKbz.webp'); height: 400px;" >
+                  <div class="row rounded news">
+                    <div class="col-lg-12 col-3 bg-image rounded cursor-pointer" style="background-image: url('Images/yB4gParKbz.webp'); height: 400px;" >
                         
                     </div>
                     <div class="col-lg-12 col-9 text-black">
@@ -290,7 +356,7 @@
                     
                 </div>
                 <div class="col-md-6 text-black">
-                    <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                    <div class="mb-2 d-flex align-items-center rounded shadow-3-soft news">
                         <img src="Images/images (1).jpeg" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
                         <div class="p-2">
                           <div>
@@ -302,7 +368,7 @@
                           </div>
                         </div>
                     </div>
-                    <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                    <div class="mb-2 d-flex align-items-center rounded shadow-3-soft news">
                       <img src="Images/500x300_1097547-untitleddesign10.webp" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
                       <div class="p-2">
                         <div>
@@ -314,7 +380,7 @@
                         </div>
                       </div>
                   </div>
-                  <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                  <div class="mb-2 d-flex align-items-center rounded shadow-3-soft news">
                     <img src="Images/yB4gParKbz.webp" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
                     <div class="p-2">
                       <div>
@@ -326,7 +392,7 @@
                       </div>
                     </div>
                 </div>
-                <div class="mb-2 d-flex align-items-center rounded shadow-3-soft">
+                <div class="mb-2 d-flex align-items-center rounded shadow-3-soft news">
                   <img src="Images/images (2).jpeg" class="img-fluid rounded" alt="Player 2" style="width: 150px;">
                   <div class="p-2">
                     <div>
@@ -346,8 +412,8 @@
     <!-- Premier league section -->
      <section class="premierLeague py-lg-5 py-2 text-black text-center" style="background-color: #f5f5f5;">
       <div class="fs-1 fw-bold">Premier League</div>
-      <div class="container table-responsive">
-        <table class="table align-middle mb-0 bg-white">
+      <div class="container table-responsive table-scrollable">
+        <table class="table table-hover table-striped align-middle mb-0 bg-white">
           <thead class="bg-light">
             <tr>
               <th>Position</th>
@@ -382,7 +448,7 @@
               <td>34</td>
             </tr>
             <tr>
-              <td>1</td>
+              <td>2</td>
               <td>
                 <div class="d-flex align-items-center">
                   <img
@@ -403,7 +469,70 @@
               <td>34</td>
             </tr>
             <tr>
+              <td>3</td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img
+                      src="Images/logos/Cricket League Logo, Cricket Team Logo Transparent, Cricket Tornament Cricket League Logo 2023, Cricket Ball PNG Transparent Clipart Image and PSD File for Free Download.jpeg"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                      class="rounded-circle"
+                      />
+                  <div class="ms-3">
+                    <p class="fw-bold mb-1">Team C</p>
+                  </div>
+                </div>
+              </td>
+              <td>4</td>
+              <td>7</td>
+              <td>15</td>
+              <td>34</td>
+              <td>34</td>
+            </tr>
+            <tr></tr>
               <td>1</td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img
+                      src="Images/logos/Creative Cricket Logo Png, Transparent Png , Transparent Png Image - PNGitem.jpeg"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                      class="rounded-circle"
+                      />
+                  <div class="ms-3">
+                    <p class="fw-bold mb-1">Team A</p>
+                  </div>
+                </div>
+              </td>
+              <td>4</td>
+              <td>7</td>
+              <td>15</td>
+              <td>34</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>
+                <div class="d-flex align-items-center">
+                  <img
+                      src="Images/logos/Avengers Logo, Cricket Team Logo Transparent, Cricket League Logo 2023, Psl Team Logos PNG Transparent Clipart Image and PSD File for Free Download.jpeg"
+                      alt=""
+                      style="width: 45px; height: 45px"
+                      class="rounded-circle"
+                      />
+                  <div class="ms-3">
+                    <p class="fw-bold mb-1">Team B</p>
+                  </div>
+                </div>
+              </td>
+              <td>4</td>
+              <td>7</td>
+              <td>15</td>
+              <td>34</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td>3</td>
               <td>
                 <div class="d-flex align-items-center">
                   <img
@@ -439,42 +568,71 @@
 
       <!-- Experience Section -->
      <section>
-      <div class="bg-image" style="background-image: url('Images/500x300_1097547-untitleddesign10.webp'); height: 300px;">
-dsdsd
+      <div class="bg-image vh-100 text-white d-flex align-items-center" style="background-image: url('Images/wp2032589.jpg');">
+        <div class="container text-start">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="fw-bolder fs-1">Join the Cricket Fever!</div>
+              <div class="opacity-80 my-3">
+                <ul>
+                  <li>Interactive polls or quizzes related to the tournament.</li>
+                  <li>Social media links with a hashtag like #CricketFever2024.</li>
+                  <li>Encourage fans to share their best moments or predictions about the tournament.</li>
+                </ul>
+              </div>
+            <button class="btn btn-danger mt-2">Join Now</button>
+            </div>
+            <div class="col-lg-4"></div>
+          </div>
+      </div>
       </div>
      </section>
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title text-white">Contact Us</h2>
-            <form id="contactForm">
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" id="name" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" id="email" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea id="message" class="form-control" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-warning btn-block">Send Message</button>
-            </form>
+    <!-- sponcer section -->
+     <section>
+      <div class="slider">
+        <div class="slide-track">
+          <div class="slide">
+            <img src="https://i.ibb.co/y8R5qrp/brand-number-one-1.png" alt="brand-number-one-1" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/3WgLMfR/brand-number-two-1.png" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/Vp5Q57N/brand-number-three.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/LYhVKBy/brand-number-four-1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/6gsyP1h/brand-number-five-1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/Yt15RLr/brand-number-six-1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/6WTZ118/brand-number-seven-1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/QPLgPL0/brand-number-eight.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/FKj2H3X/svkcrypto-podcast-500x200.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/wd7FSnZ/brand-number-ten-1.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/fDL9QLz/brand-number-eleven.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="https://i.ibb.co/z5YCnWD/brand-number-twelve.png" height="100" width="250" alt="" />
+          </div>
+          <div class="slide">
+            <img src="" height="100" width="250" alt="" />
+          </div>
         </div>
-    </section>
-
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Get the best cricket stories into your inbox!</h2>
-            <form id="newsletterForm">
-                <input type="email" class="form-control" placeholder="Enter Your Email Address">
-                <button type="submit" class="btn btn-dark">Subscribe</button>
-            </form>
-        </div>
-    </section>
+      </div>
+     </section>
     <!-- Footer Section -->
      <!-- Footer -->
 <footer class="text-center text-lg-start bg-body-tertiary text-muted">
@@ -520,11 +678,10 @@ dsdsd
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>XYZ Organisation
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab assumenda architecto maxime debitis veritatis doloribus modi est fugit dolores cupiditate!
           </p>
         </div>
         <!-- Grid column -->
@@ -592,8 +749,8 @@ dsdsd
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    © 2024 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">XYZ Organosation</a>
   </div>
   <!-- Copyright -->
 </footer>
