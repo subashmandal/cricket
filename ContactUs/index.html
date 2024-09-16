@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+        <!-- Standard favicon -->
+        <link rel="icon" type="image/png" href="../Images/favicon_io/favicon-16x16.png" sizes="16x16">
+
+        <!-- For high-resolution displays -->
+        <link rel="icon" type="image/png" href="../Images/favicon_io/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../Images/favicon_io/apple-touch-icon.png" sizes="96x96">
+    
+        <!-- Apple Touch Icon for iOS devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../Images/favicon_io/apple-touch-icon.png">
+    
+        <!-- For older versions of IE (ICO format) -->
+        <link rel="shortcut icon" href="../Images/favicon_io/favicon.ico">
+    
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <!-- MDB Bootstrap CSS -->
+        <link href="../css/mdb.min.css" rel="stylesheet" />
+        <!-- MDB Bootstrap JS -->
+        <script src="js/mdb.min.js"></script>
+        <link rel="stylesheet" href="../plugins/css/all.min.css" />
+        <script type="text/javascript" src="../plugins/js/all.min.js"></script>
+</head>
+<body>
+    <!-- Contact Section -->
+    <section class="vh-100 bg-image" id="contact" style="background-image: url('../Images/login.jpg');">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                  <div class="card shadow-2-strong" style="border-radius: 1rem; background-color: rgba(145, 197, 161, 0.9);">
+                    <div class="card-body p-5 text-center text-black">
+                        <h2 class="section-title text-white">Contact Us</h2>
+                        <form id="contactForm">
+                            <div class="mb-3">
+                                <div class="form-helper text-start text-black">Name</div>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-helper text-start text-black">Email</div>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <div class="form-helper text-start text-black">Message</div>
+                                <textarea id="message" class="form-control" rows="4" required placeholder="Write Message"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success text-capitalize">Send Message</button>
+                        </form>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    // Handle contact form submission
+    $('#contactForm').on('submit', function(event) {
+        event.preventDefault();
+        alert("Message sent successfully!");
+    });
+</script>
+</html>
