@@ -26,8 +26,14 @@
     <script src="js/mdb.min.js"></script>
     <link rel="stylesheet" href="plugins/css/all.min.css" />
     <script type="text/javascript" src="plugins/js/all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 
     <style>
+            /* flaticon CDN */
+            @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+        body {
+            font-family: 'Arial', sans-serif;
+        }
         body {
             font-family: 'Arial', sans-serif;
         }
@@ -580,6 +586,45 @@ dsdsd
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+ <!-- Modal -->
+<div class="modal fade" id="SubscribeModal" tabindex="-1" aria-labelledby="SubscribeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="">
+          <div class="text-black text-center">
+            <div>
+              <h1 class="fw-bold">Subscribe for the updates!</h1>
+              <div class="input-group my-3">
+                <span class="input-group-text" id="basic-addon1"><i class="fi fi-rr-envelope"></i></span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Enter Your Email address."
+                  aria-label="Enter Your Email address."
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+                <!-- Default checkbox -->
+                <div class="d-flex justify-content-start">
+                  <div class="form-check form-check-inline text-start">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                    <label class="form-check-label" for="inlineCheckbox1">I agree to the <a href="#">Privacy Policy</a></label>
+                  </div>
+                </div>
+              <button type="button" class="btn btn-block text-white rounded-9 shadow-0 mt-3" style="background-color: rgb(233, 43, 52);">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/mdb.min.js"></script>
+<script src="plugins/js/all.min.js"></script>
     <script>
         const today = new Date();
 
@@ -599,6 +644,12 @@ dsdsd
             event.preventDefault();
             alert("Subscribed to newsletter!");
         });
+        document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      var SubscribeModal = new mdb.Modal(document.getElementById('SubscribeModal'));
+      SubscribeModal.show(); // Show modal after 5 seconds
+    }, 5000); // 10000 milliseconds = 5 seconds
+  });
     </script>
 </body>
 </html>
