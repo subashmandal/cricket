@@ -4,9 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Wooble | Blog-Template</title>
-    <!-- MDB icon -->
-    <link rel="icon" href="../img/mdb-favicon.ico" type="image/x-icon" />
+    <title>Blogs | XYZ Organization</title>
+        <!-- Standard favicon -->
+        <link rel="icon" type="image/png" href="../Images/favicon_io/favicon-16x16.png" sizes="16x16">
+
+        <!-- For high-resolution displays -->
+        <link rel="icon" type="image/png" href="../Images/favicon_io/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="../Images/favicon_io/apple-touch-icon.png" sizes="96x96">
+    
+        <!-- Apple Touch Icon for iOS devices -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../Images/favicon_io/apple-touch-icon.png">
+    
+        <!-- For older versions of IE (ICO format) -->
+        <link rel="shortcut icon" href="../Images/favicon_io/favicon.ico">
+    
+        <!-- jQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+        <!-- MDB Bootstrap CSS -->
+        <link href="../css/mdb.min.css" rel="stylesheet" />
+        <!-- MDB Bootstrap JS -->
+        <script src="../js/mdb.min.js"></script>
+        <link rel="stylesheet" href="../plugins/css/all.min.css" />
+        <script type="text/javascript" src="../plugins/js/all.min.js"></script>
+        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -17,8 +38,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
-    <!-- MDB -->
-    <link rel="stylesheet" href="css/mdb.min.css" />
     <style>
       .bg-image:hover{
         cursor: pointer;
@@ -34,91 +53,109 @@
       color: #E4A11B;
       cursor: pointer;
       }
+      .nav-link{
+        color: white;
+      }
     </style>
   </head>
   <body>
     <!-- Start your project here-->
-    <header>
-        <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white" >
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-      <!-- Toggle button -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>
-      </button>
-  
-      <!-- Collapsible wrapper -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- Navbar brand -->
-        <a class="navbar-brand mt-2 mt-lg-0" href="#">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-            height="15"
-            alt="MDB Logo"
-            loading="lazy"
-          />
-        </a>
-        <!-- Left links -->
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-        <!-- Left links -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-black position-sticky sticky-top">
+      <!-- Container wrapper -->
+      <div class="container">
+        <!-- Toggle button -->
+        <button
+          data-mdb-collapse-init
+          class="navbar-toggler"
+          type="button"
+          data-mdb-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+    
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Navbar brand -->
+          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+            <img
+              src="../Images/logos/3f8fe1d77881cb06ca3cbfc74d4af692-removebg-preview.png"
+              height="50"
+              alt="MDB Logo"
+              loading="lazy"
+            />
+          </a>
+          <!-- Left links -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tournament</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sportsphere</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>        
+          </ul>
+          <!-- Left links -->
+        </div>
+        <!-- Collapsible wrapper -->
+    
+        <!-- Right elements -->
+        <div class="d-flex align-items-center">
+          <!-- Icon -->
+          <a class="link-secondary me-3" href="#">
+            <i class="fas fa-shopping-cart"></i>
+          </a>
+    
+          <!-- Notifications -->
+          <div class="dropdown">
+            <a
+              data-mdb-dropdown-init
+              class="link-secondary me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              aria-expanded="false"
+            >
+              <button class="btn btn-outline-light btn-rounded">Signin</button>
+            </a>
+          </div>
+          <!-- Avatar -->
+          <div class="dropdown">
+            <a
+              data-mdb-dropdown-init
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuAvatar"
+              role="button"
+              aria-expanded="false"
+            >
+              <button class="btn text-white btn-rounded" style="background-color: rgb(233, 43, 52);">Create Free Account</button>
+            </a>
+          </div>
+        </div>
+        <!-- Right elements -->
       </div>
-      <!-- Collapsible wrapper -->
-  
-      <!-- Right elements -->
-      <div class="d-flex align-items-center">
-        <!-- Social Icon -->
-        <!-- Facebook -->
-        <a class="link-secondary me-3" href="#">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <!-- Twitter -->
-        <a class="link-secondary me-3" href="#">
-            <i class="fab fa-twitter"></i>
-        </a>
-        <!-- Instagram -->
-        <a class="link-secondary me-3" href="#">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <!-- Pinterest -->
-        <a class="link-secondary me-3" href="#">
-            <i class="fab fa-pinterest"></i>
-        </a>       
-      </div>
-      <!-- Right elements -->
-    </div>
-    <!-- Container wrapper -->
-  </nav>
-  <!-- Navbar -->
-    </header>
+      <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
     <main class="bg-secondary">
-        <?php
-        include 'url-copy.php';
-        ?>
       <!-- 1st container -->
         <div class="container py-2">
         <div class="row">
 
             <div class="col-md-6 p-1 bg-image hover-overlay">
-                <div class="rounded-6 position-relative" style="background-image: url('images/1.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 50vh;">
+                <div class="rounded-6 position-relative" style="background-image: url('../Images/cricket_image/1672129101396.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 50vh;">
                   <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                     <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
@@ -132,7 +169,7 @@
             <div class="col-md-6">
 
               <div class="py-1 bg-image hover-overlay">
-                <div class="rounded-6 position-relative" style="background-image: url('images/2.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 25vh;">
+                <div class="rounded-6 position-relative" style="background-image: url('../Images/cricket_image/ai-generated-cricket-bat-ball-stumps-and-bails-photo.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 25vh;">
                   <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                     <span><button type="button" class="btn btn-danger btn-sm">Music</button></span>
@@ -145,7 +182,7 @@
               <div class="row">
 
                 <div class="col-md-6 py-1 bg-image hover-overlay">
-                  <div class="rounded-6 position-relative" style="background-image: url('images/3.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 25vh;">
+                  <div class="rounded-6 position-relative" style="background-image: url('../Images/cricket_image/cricket-team-1.avif'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 25vh;">
                     <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                     <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                       <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
@@ -156,7 +193,7 @@
                 </div>
 
                 <div class="col-md-6 py-1 bg-image hover-overlay">
-                  <div class="rounded-6 position-relative" style="background-image: url('images/4.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 25vh;">
+                  <div class="rounded-6 position-relative" style="background-image: url('../Images/cricket_image/download.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 25vh;">
                     <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                     <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                       <span><button type="button" class="btn btn-success btn-sm">Nature</button></span>
@@ -175,7 +212,7 @@
           <div class="row">
 
                   <div class="col-lg-3 my-1 bg-image hover-overlay">
-                    <div class="position-relative" style="background-image: url('images/1.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
+                    <div class="position-relative" style="background-image: url('../Images/cricket_image/images\ \(1\).jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
                       <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                       <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                         <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
@@ -187,7 +224,7 @@
                 </div>
 
                   <div class="col-lg-3 my-1 bg-image hover-overlay">
-                    <div class="position-relative" style="background-image: url('images/2.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
+                    <div class="position-relative" style="background-image: url('../Images/cricket_image/images\ \(1\).jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
                       <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                       <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                         <span><button type="button" class="btn btn-danger btn-sm">Music</button></span>
@@ -199,7 +236,7 @@
                 </div>
 
                <div class="col-lg-3 my-1 bg-image hover-overlay">
-                 <div class="position-relative" style="background-image: url('images/3.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
+                 <div class="position-relative" style="background-image: url('../Images/images\ \(2\).jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
                    <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                    <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                      <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
@@ -211,7 +248,7 @@
               </div>
 
              <div class="col-lg-3 my-1 bg-image hover-overlay">
-                <div class="position-relative" style="background-image: url('images/4.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
+                <div class="position-relative" style="background-image: url('../Images/cricket_image/India-Cricket-WCup-68_1699809986420_1699810043017.avif'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;">
                  <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                  <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                    <span><button type="button" class="btn btn-success btn-sm">Nature</button></span>
@@ -232,13 +269,13 @@
               <!-- Big Card -->
               <div class="card mb-3 border-dark">
                 <div class="bg-image hover-overlay">
-                <img src="images/1.jpg" class="card-img-top" alt="Wild Landscape"/>
+                <img src="../Images/cricket_image/Pollock_to_Hussey.jpg" class="card-img-top" alt="Wild Landscape"/>
                 <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                 </div>
                 <div class="card-body">
                   <h5 class="card-title text-wrap title">It Really Have Good Feeling When You Enjoy Nature</h5>
                   <p class="card-text col">
-                    <span class="fw-bold title">wooble.org</span>
+                    <span class="fw-bold title">XYZ.org</span>
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </p>
                   <p class="card-text">
@@ -252,7 +289,7 @@
               <div class="mb-3 bg-transparent shadow-0">
                 <div class="row g-0">
                   <div class="col-lg-5 bg-image hover-overlay ripple">
-                    <div class="rounded-6" style="background-image: url('images/4.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
+                    <div class="rounded-6" style="background-image: url('../Images/cricket_image/ugvcvyuorglkafijaz4x.avif'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
                     <div class="mask rounded-6" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   </div>
                   <div class="col-lg-7 d-flex align-items-center">
@@ -260,7 +297,7 @@
                       <button type="button" class="btn btn-success btn-sm d-none d-md-block">Nature</button>
                       <h5 class="my-3 c-title">This Is My Favourite Place That I Visit</h5>
                       <p class="col">
-                        <span class="fw-bold title">wooble.org</span>
+                        <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
                       <p class="card-text">
@@ -276,7 +313,7 @@
               <div class="card mb-3 bg-transparent shadow-0">
                 <div class="row g-0">
                   <div class="col-lg-5 bg-image hover-overlay ripple">
-                    <div class="rounded-6" style="background-image: url('images/5.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
+                    <div class="rounded-6" style="background-image: url('../Images/cricket_image/cricket-team-1.avif'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
                     <div class="mask rounded-6" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   </div>
                   <div class="col-lg-7 d-flex align-items-center">
@@ -284,7 +321,7 @@
                       <button type="button" class="btn btn-danger btn-sm d-none d-md-block">Music</button>
                       <h5 class="my-3 c-title ">This Is My Favourite Song That I Usally Listen</h5>
                       <p class="col">
-                        <span class="fw-bold title">wooble.org</span>
+                        <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
                       <p class="card-text">
@@ -300,7 +337,7 @@
               <div class="card mb-3 bg-transparent shadow-0">
                 <div class="row g-0">
                   <div class="col-lg-5 bg-image hover-overlay ripple">
-                    <div class="rounded-6" style="background-image: url('images/6.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
+                    <div class="rounded-6" style="background-image: url('../Images/cricket_image/ai-generated-cricket-bat-ball-stumps-and-bails-photo.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
                     <div class="mask rounded-6" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   </div>
                   <div class="col-lg-7 d-flex align-items-center">
@@ -308,7 +345,7 @@
                       <button type="button" class="btn btn-success btn-sm d-none d-md-block">Nature</button>
                       <h5 class="my-3 c-title">This Is My Favourite Place That I mostly Visit</h5>
                       <p class="col">
-                        <span class="fw-bold title">wooble.org</span>
+                        <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
                       <p class="card-text">
@@ -324,7 +361,7 @@
               <div class="card mb-3 bg-transparent shadow-0">
                 <div class="row g-0">
                   <div class="col-lg-5 bg-image hover-overlay ripple">
-                    <div class="rounded-6" style="background-image: url('images/7.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
+                    <div class="rounded-6" style="background-image: url('../Images/cricket_image/Pollock_to_Hussey.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
                     <div class="mask rounded-6" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   </div>
                   <div class="col-lg-7 d-flex align-items-center">
@@ -332,7 +369,7 @@
                       <button type="button" class="btn btn-success btn-sm d-none d-md-block">Nature</button>
                       <h5 class="my-3 c-title">Best Place In india that you Should Visit Once.</h5>
                       <p class="col">
-                        <span class="fw-bold title">wooble.org</span>
+                        <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
                       <p class="card-text">
@@ -348,7 +385,7 @@
               <div class="card mb-3 bg-transparent shadow-0">
                 <div class="row g-0">
                   <div class="col-lg-5 bg-image hover-overlay ripple">
-                    <div class="rounded-6" style="background-image: url('images/8.jpeg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
+                    <div class="rounded-6" style="background-image: url('../Images/cricket_image/cricket-team-1.avif'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 30vh;"></div>
                     <div class="mask rounded-6" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   </div>
                   <div class="col-lg-7 d-flex align-items-center">
@@ -356,7 +393,7 @@
                       <button type="button" class="btn btn-info btn-sm d-none d-md-block">Fruits</button>
                       <h5 class="my-3 c-title">My Favourite Fruit.</h5>
                       <p class="col">
-                        <span class="fw-bold title">wooble.org</span>
+                        <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
                       <p class="card-text">
@@ -466,7 +503,7 @@
                 <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                 <div class="row">
                     <div class="col-lg-3 col-3">
-                      <div class="rounded" style="background-image: url('images/2.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                      <div class="rounded" style="background-image: url('../Images/cricket_image/1672129101396.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                     </div>
                     <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
                         <h6 class="fw-light c-title">My Favourite Fruit.</h6>
@@ -478,7 +515,7 @@
                 <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                   <div class="row">
                       <div class="col-lg-3 col-3">
-                        <div class="rounded" style="background-image: url('images/6.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                        <div class="rounded" style="background-image: url('../Images/cricket_image/Pollock_to_Hussey.jpg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                       </div>
                       <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
                           <h6 class="fw-light c-title">This Is My Favourite Place That I mostly Visit</h6>
@@ -490,7 +527,7 @@
                   <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                     <div class="row">
                         <div class="col-lg-3 col-3">
-                          <div class="rounded" style="background-image: url('images/5.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                          <div class="rounded" style="background-image: url('../Images/cricket_image/ugvcvyuorglkafijaz4x.avif'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                         </div>
                         <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
                             <h6 class="fw-light c-title">My Favourite Fruit.</h6>
@@ -506,7 +543,7 @@
                 <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                 <div class="row">
                     <div class="col-lg-3 col-3">
-                      <div style="background-image: url('images/7.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                      <div style="background-image: url('../Images/cricket_image/download.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                     </div>
                     <div class="col-lg-9 col-md-6 col-9 d-flex justify-content-center flex-column">
                         <h6 class="fw-light c-title">My Favourite Fruit.</h6>
@@ -518,7 +555,7 @@
                 <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                   <div class="row">
                       <div class="col-lg-3 col-3">
-                        <div style="background-image: url('images/5.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                        <div style="background-image: url('../Images/cricket_image/ai-generated-cricket-bat-ball-stumps-and-bails-photo.jpg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                       </div>
                       <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
                           <h6 class="fw-light c-title">This Is My Favourite Place That I mostly Visit</h6>
@@ -530,7 +567,7 @@
                   <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                     <div class="row">
                         <div class="col-lg-3 col-3">
-                          <div style="background-image: url('images/3.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                          <div style="background-image: url('../Images/cricket_image/images\ \(1\).jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                         </div>
                         <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
                             <h6 class="fw-light c-title">My Favourite Fruit.</h6>
@@ -543,7 +580,7 @@
               <div class="my-3">
                 <h4 class="text-black"><u>Subscribe Us</u></h4>
               <div class="col-lg-12">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/0I8Nwi7eUXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/Y_YAad9gLDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
               </div>
               <!-- Facebook -->
@@ -573,7 +610,7 @@
 
             <div class="col-lg-3">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="images/6.jpeg" class="img-fluid rounded-6 w-100"/>
+                <img src="../Images/cricket_image/download.jpeg" class="img-fluid rounded-6 w-100"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -581,7 +618,7 @@
               <div class="card-body">
                 <h5 class="d-flex justify-content-center c-title">This Is My Favourite Place That I mostly Visit</h5>
                 <p class="card-text col">
-                  <span class="fw-bold">wooble.org</span>
+                  <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.11.2022</small>
                 </p>
               </div>
@@ -589,7 +626,7 @@
 
             <div class="col-lg-3">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="images/3.jpeg" class="img-fluid rounded-6 w-100"/>
+                <img src="../Images/cricket_image/images (1).jpeg" class="img-fluid rounded-6 w-100"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -597,7 +634,7 @@
               <div class="card-body">
                 <h5 class="d-flex justify-content-center c-title">This Is My Favourite picture that i use most of the time...</h5>
                 <p class="card-text col">
-                  <span class="fw-bold">wooble.org</span>
+                  <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.13.2022</small>
                 </p>
               </div>
@@ -605,7 +642,7 @@
 
             <div class="col-lg-3">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="images/7.jpeg" class="img-fluid rounded-6 w-100"/>
+                <img src="../Images/cricket_image/India-Cricket-WCup-68_1699809986420_1699810043017.avif" class="img-fluid rounded-6 w-100"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -613,7 +650,7 @@
               <div class="card-body">
                 <h5 class="d-flex justify-content-center c-title">Best Place In india that you Should Visit Once.</h5>
                 <p class="card-text col">
-                  <span class="fw-bold">wooble.org</span>
+                  <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.18.2022</small>
                 </p>
               </div>
@@ -621,7 +658,7 @@
 
             <div class="col-lg-3">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="images/2.jpeg" class="img-fluid rounded-6 w-100"/>
+                <img src="../Images/cricket_image/cricket-team-1.avif" class="img-fluid rounded-6 w-100"/>
                 <a href="#!">
                   <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
                 </a>
@@ -629,7 +666,7 @@
               <div class="card-body">
                 <h5 class="d-flex justify-content-center c-title">This Is My Favourite picture that i use most of the time...</h5>
                 <p class="card-text col">
-                  <span class="fw-bold">wooble.org</span>
+                  <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.07.2022</small>
                 </p>
               </div>
@@ -637,55 +674,132 @@
           </div>
         </div>
     </main>
-        <footer class="bg-light text-center">
-          <!-- Grid container -->
-          <div class="container p-4 pb-0">
-            <!-- Section: Form -->
-            <section class="">
-              <form action="">
-                <!--Grid row-->
-                <div class="row d-flex justify-content-center">
-                  <!--Grid column-->
-                  <div class="col-auto">
-                    <p class="pt-2">
-                      <strong>Sign up for our newsletter</strong>
-                    </p>
-                  </div>
-                  <!--Grid column-->
-        
-                  <!--Grid column-->
-                  <div class="col-md-5 col-12">
-                    <!-- Email input -->
-                    <div class="form-outline mb-4">
-                      <input type="email" id="form5Example27" class="form-control" />
-                      <label class="form-label" for="form5Example27">Email address</label>
-                    </div>
-                  </div>
-                  <!--Grid column-->
-        
-                  <!--Grid column-->
-                  <div class="col-auto">
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary mb-4">
-                      Subscribe
-                    </button>
-                  </div>
-                  <!--Grid column-->
-                </div>
-                <!--Grid row-->
-              </form>
-            </section>
-            <!-- Section: Form -->
+    <!-- Footer Section -->
+     <!-- Footer -->
+     <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+      <!-- Section: Social media -->
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+    
+        <!-- Right -->
+        <div>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+    
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="fw-bold mb-4 text-black">
+                XYZ organization
+              </h6>
+              <p>
+                Here you can use rows and columns to organize your footer content. Lorem ipsum
+                dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 col-6 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4 text-black">
+                Products
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Angular</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">React</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vue</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Laravel</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 col-6 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4 text-black">
+                Useful links
+              </h6>
+              <p>
+                <a href="#!" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="blogs/" class="text-reset">Blogs</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Orders</a>
+              </p>
+              <p>
+                <a href="ContactUs/" class="text-reset">Contact Us</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Help</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+    
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4 text-black">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                info@example.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+              <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+            </div>
+            <!-- Grid column -->
           </div>
-          <!-- Grid container -->
-        
-          <!-- Copyright -->
-          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-dark" href="https://wooble.org/">Wooble.org</a>
-          </div>
-          <!-- Copyright -->
-        </footer>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">XYZ Organization</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <!-- End your project here-->
 
     <!-- MDB -->
