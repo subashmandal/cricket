@@ -83,12 +83,12 @@
 </head>
 <body class="position-relative" style="overflow-x: hidden;">
     <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-black">
+<nav class="navbar navbar-expand-lg bg-black position-sticky sticky-top">
     <!-- Container wrapper -->
     <div class="container">
       <!-- Toggle button -->
       <button
-        data-mdb-collapse-init
+        data-mdb-collapse="true"
         class="navbar-toggler"
         type="button"
         data-mdb-target="#navbarSupportedContent"
@@ -106,26 +106,23 @@
           <img
             src="Images/logos/3f8fe1d77881cb06ca3cbfc74d4af692-removebg-preview.png"
             height="50"
-            alt="MDB Logo"
+            alt="XYZ Logo"
             loading="lazy"
           />
         </a>
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Tournament</a>
+            <a class="nav-link" href="alligator/">Alligator</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sportsphere</a>
+            <a class="nav-link" href="aboutUs/">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Events</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blogs</a>
+            <a class="nav-link" href="blogs/">Blogs</a>
           </li>        
         </ul>
         <!-- Left links -->
@@ -134,36 +131,17 @@
   
       <!-- Right elements -->
       <div class="d-flex align-items-center">
-        <!-- Icon -->
-        <a class="link-secondary me-3" href="#">
-          <i class="fas fa-shopping-cart"></i>
-        </a>
-  
-        <!-- Notifications -->
-        <div class="dropdown">
-          <a
-            data-mdb-dropdown-init
-            class="link-secondary me-3 dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            aria-expanded="false"
-          >
+        <!-- Login -->
+        <div class="m-1">
+          <a href="login/">
             <button class="btn btn-outline-light btn-rounded">Signin</button>
           </a>
         </div>
-        <!-- Avatar -->
-        <div class="dropdown">
-          <a
-            data-mdb-dropdown-init
-            class="dropdown-toggle d-flex align-items-center hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuAvatar"
-            role="button"
-            aria-expanded="false"
-          >
-            <button class="btn text-white btn-rounded" style="background-color: rgb(233, 43, 52);">Create Free Account</button>
-          </a>
+        <!-- Signup -->
+        <div class="m-1">
+            <a href="signup/">
+              <button class="btn text-white btn-rounded" style="background-color: rgb(233, 43, 52);">Create Free Account</button>
+            </a>
         </div>
       </div>
       <!-- Right elements -->
@@ -187,7 +165,7 @@
 
     <!-- Scorecards -->
     <section class="schedule" id="schedule">
-        <div class="container">
+        <div class="">
             <div class="d-flex" style="white-space: nowrap; overflow-x: auto; scroll-behavior: smooth;">
                 <div class="card text-center p-3 me-1" style="min-width: 350px; cursor: pointer;" onclick="window.open('alligator', '_self')">
                     <div class="date" style="font-size: small;"></div>
@@ -581,16 +559,10 @@
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a href="signup/" class="text-reset">Signup</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <a href="login/" class="text-reset">Login</a>
           </p>
         </div>
         <!-- Grid column -->
@@ -602,19 +574,19 @@
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="index.html" class="text-reset">Home</a>
+          </p>
+          <p>
+            <a href="alligator/" class="text-reset">Alligator</a>
+          </p>
+          <p>
+            <a href="aboutUs/" class="text-reset">About Us</a>
           </p>
           <p>
             <a href="blogs/" class="text-reset">Blogs</a>
           </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
+          <p></p>
             <a href="ContactUs/" class="text-reset">Contact Us</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
           </p>
         </div>
         <!-- Grid column -->

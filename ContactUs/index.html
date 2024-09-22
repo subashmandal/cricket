@@ -26,15 +26,120 @@
         <script src="js/mdb.min.js"></script>
         <link rel="stylesheet" href="../plugins/css/all.min.css" />
         <script type="text/javascript" src="../plugins/js/all.min.js"></script>
-        <style>
-        .nav-link:hover, .nav-link:focus, .nav-link:active {
-            color: rgb(233, 43, 52) !important;
-        }
+            <style>
+                /* flaticon CDN */
+                @import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+            body {
+                font-family: 'Arial', sans-serif;
+            }
+            .hero {
+                background: url('Images/img1.png') no-repeat center center/cover;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                text-align: center;
+                position: relative;
+            }
+            .hero h1 {
+                font-size: 4rem;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            }
+            .schedule {
+                background-color: #f5f5f5;
+                padding: 60px 0;
+            }
+            .nav-link{
+                color: white;
+            }
+            .nav-link:hover, .nav-link:focus, .nav-link:active {
+              color: rgb(233, 43, 52) !important;
+            }
+            .truncate-text{
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 2; /* Limits text to 2 lines */
+              line-height: 1.5;      /* Optional: Adjust line height */
+              max-height: 3em;
+            }
         </style>
 </head>
 <body>
+        <!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-black position-sticky sticky-top">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Toggle button -->
+      <button
+        data-mdb-collapse="true"
+        class="navbar-toggler"
+        type="button"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars text-white"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="../Images/logos/3f8fe1d77881cb06ca3cbfc74d4af692-removebg-preview.png"
+            height="50"
+            alt="XYZ Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../alligator/">Alligator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutUs/">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../blogs/">Blogs</a>
+          </li>        
+        </ul>
+        <!-- Left links -->
+      </div>
+      <!-- Collapsible wrapper -->
+  
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Login -->
+        <div class="m-1">
+          <a href="../login/">
+            <button class="btn btn-outline-light btn-rounded">Signin</button>
+          </a>
+        </div>
+        <!-- Signup -->
+        <div class="m-1">
+            <a href="../signup/">
+              <button class="btn text-white btn-rounded" style="background-color: rgb(233, 43, 52);">Create Free Account</button>
+            </a>
+        </div>
+      </div>
+      <!-- Right elements -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
     <!-- Contact Section -->
-    <section class="vh-100 bg-image" id="contact" style="background-image: url('../Images/login.jpg');">
+    <section class="bg-image" id="contact" style="background-image: url('../Images/login.jpg'); min-height: 100vh;">
         <div class="container py-5 h-100">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
