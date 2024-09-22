@@ -33,7 +33,7 @@
 <body>
     <section class="bg-image" style="background-image: url('../Images/login.jpg'); min-height: 100vh;">
         <div class="container py-3 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="row d-flex justify-content-center align-items-center" style="min-height: 100vh;">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
               <div class="card shadow-2-strong" style="border-radius: 1rem; background-color: rgba(145, 197, 161, 0.9);">
                 <div class="card-body p-4 text-center text-black">
@@ -42,22 +42,22 @@
       
                   <div class="mb-3">
                     <div class="form-helper text-start text-black">Name</div>
-                    <input type="text" class="form-control" placeholder="Name"/>
+                    <input type="text" id="name" class="form-control" placeholder="Name"/>
                   </div>
 
                   <div class="mb-3">
                     <div class="form-helper text-start text-black">Email</div>
-                    <input type="email" class="form-control" placeholder="Email"/>
+                    <input type="email" id="email" class="form-control" placeholder="Email"/>
                   </div>
 
                   <div class="mb-3">
                     <div class="form-helper text-start text-black">Password</div>
-                    <input type="password" class="form-control" placeholder="Password"/>
+                    <input type="password" id="password" class="form-control" placeholder="Password"/>
                   </div>
 
                   <div class="mb-3">
                     <div class="form-helper text-start text-black">Re type password</div>
-                    <input type="password" class="form-control" placeholder="Re type password"/>
+                    <input type="password" id="confirm-password" class="form-control" placeholder="Re type password"/>
                   </div>
       
                   <!-- Checkbox -->
@@ -65,8 +65,9 @@
                     <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
                     <label class="form-check-label" for="form1Example3"> Remember password </label>
                   </div>
-      
-                  <button class="btn btn-primary btn-sm text-capitalize" type="submit">Signup</button>
+    
+                  <div id="ErrorMsg" class="text-danger text-start"></div>
+                  <button id="signup-btn" class="btn btn-primary btn-sm text-capitalize" type="submit">Signup</button>
       
                   <hr class="my-2 text-white">
       
@@ -82,5 +83,72 @@
           </div>
         </div>
       </section>
+          <!-- jQuery CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+          $('#signup-btn').click(function() {
+              // Get input values
+              const name = $('#name').val().trim();
+              const email = $('#email').val().trim();
+              const password = $('#password').val().trim();
+              const confirmPassword = $('#confirm-password').val().trim();
+  
+              // Clear previous error messages
+              $('#ErrorMsg').text('');
+  
+              // Email validation regex
+              const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+              // Password validation regex: Minimum 8 characters, at least one uppercase, one lowercase, one number, one special character
+              const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  
+              let errorMessage = '';
+  
+              // Check if any field is empty
+              if (name === '' || email === '' || password === '' || confirmPassword === '') {
+                  errorMessage += 'All fields are required.<br>';
+              }
+  
+              // Check if email is valid
+              if (email !== '' && !emailRegex.test(email)) {
+                  errorMessage += 'Invalid email address.<br>';
+              }
+  
+              // Check if password meets criteria
+              if (password !== '' && !passwordRegex.test(password)) {
+                  errorMessage += 'Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.<br>';
+              }
+  
+              // Check if passwords match
+              if (password !== confirmPassword) {
+                  errorMessage += 'Passwords do not match.<br>';
+              }
+  
+              if (errorMessage === '') {
+                  // If no errors, submit form data using AJAX
+                  $.ajax({
+                      url: 'signup.php', // Replace with your backend URL
+                      type: 'POST',
+                      data: {
+                          name: name,
+                          email: email,
+                          password: password
+                      },
+                      success: function(response) {
+                          alert('Signup successful: ' + response);
+                      },
+                      error: function(error) {
+                          alert('Error: ' + error.responseText);
+                      }
+                  });
+              } else {
+                  // Display error messages in #ErrorMsg div with line breaks
+                  $('#ErrorMsg').html(errorMessage);
+              }
+          });
+      });
+  </script>
+  
 </body>
 </html>

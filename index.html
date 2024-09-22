@@ -635,19 +635,21 @@
                 <input
                   type="text"
                   class="form-control"
+                  id="SubEmail"
                   placeholder="Enter Your Email address."
                   aria-label="Enter Your Email address."
                   aria-describedby="basic-addon1"
                 />
               </div>
+              <div class="text-start" id="EmailResult"></div>
                 <!-- Default checkbox -->
                 <div class="d-flex justify-content-start">
                   <div class="form-check form-check-inline text-start">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked />
                     <label class="form-check-label" for="inlineCheckbox1">I agree to the <a href="#">Privacy Policy</a></label>
                   </div>
                 </div>
-              <button type="button" class="btn btn-block text-white rounded-9 shadow-0 mt-3" style="background-color: rgb(233, 43, 52);">Subscribe</button>
+              <button type="button" id="SubscribeEmail" class="btn btn-block text-white rounded-9 shadow-0 mt-3" style="background-color: rgb(233, 43, 52);">Subscribe</button>
             </div>
           </div>
         </div>
@@ -683,6 +685,32 @@
       SubscribeModal.show(); // Show modal after 5 seconds
     }, 5000); // 10000 milliseconds = 5 seconds
   });
+
+  // Email validation function
+function validateEmail(email) {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+}
+
+// Event listener for button click
+document.getElementById("SubscribeEmail").addEventListener("click", function() {
+    // Get the email value from input field
+    const emailInput = document.getElementById("SubEmail").value.trim();
+    console.log("btn clicked");
+    
+    // Validate the email
+    if (emailInput === "") {
+        document.getElementById("EmailResult").textContent = "Email field cannot be empty";
+        document.getElementById("EmailResult").style.color = "red";
+    } else if (validateEmail(emailInput)) {
+        document.getElementById("EmailResult").textContent = "Valid email address";
+        document.getElementById("EmailResult").style.color = "green";
+    } else {
+        document.getElementById("EmailResult").textContent = "Invalid email address";
+        document.getElementById("EmailResult").style.color = "red";
+    }
+});
+
     </script>
 </body>
 </html>

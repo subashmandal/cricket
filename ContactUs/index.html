@@ -140,39 +140,91 @@
   <!-- Navbar -->
     <!-- Contact Section -->
     <section class="bg-image" id="contact" style="background-image: url('../Images/login.jpg'); min-height: 100vh;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-                  <div class="card shadow-2-strong" style="border-radius: 1rem; background-color: rgba(145, 197, 161, 0.9);">
-                    <div class="card-body p-5 text-center text-black">
-                        <h2 class="section-title text-white">Contact Us</h2>
-                        <form id="contactForm">
-                            <div class="mb-3">
-                                <div class="form-helper text-start text-black">Name</div>
-                                <input type="text" id="name" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <div class="form-helper text-start text-black">Email</div>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                            <div class="mb-3">
-                                <div class="form-helper text-start text-black">Message</div>
-                                <textarea id="message" class="form-control" rows="4" required placeholder="Write Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success text-capitalize">Send Message</button>
-                        </form>
-                    </div>
+      <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+              <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem; background-color: rgba(145, 197, 161, 0.9);">
+                  <div class="card-body p-5 text-center text-black">
+                      <h2 class="section-title text-white">Contact Us</h2>
+                      <form id="contactForm" enctype="multipart/form-data">
+                          <div class="mb-3">
+                              <div class="form-helper text-start text-black">Name</div>
+                              <input type="text" id="name" class="form-control" required placeholder="Enter your name">
+                          </div>
+                          <div class="mb-3">
+                              <div class="form-helper text-start text-black">Email</div>
+                              <input type="email" id="email" class="form-control" required placeholder="Enter your email">
+                          </div>
+                          <div class="mb-3">
+                              <div class="form-helper text-start text-black">Phone (Optional)</div>
+                              <input type="tel" id="phone" class="form-control" placeholder="Enter your phone number">
+                          </div>
+                          <div class="mb-3">
+                              <div class="form-helper text-start text-black">Subject</div>
+                              <select id="subject" class="form-control" required>
+                                  <option value="" disabled selected>Select a subject</option>
+                                  <option value="general">General Inquiry</option>
+                                  <option value="feedback">Feedback</option>
+                                  <option value="support">Support</option>
+                                  <option value="other">Other</option>
+                              </select>
+                          </div>
+                          <div class="mb-3">
+                              <div class="form-helper text-start text-black">Message</div>
+                              <textarea id="message" class="form-control" rows="4" required placeholder="Write Message"></textarea>
+                          </div>
+                          <div class="mb-3">
+                              <div class="form-helper text-start text-black">Attachment (Optional)</div>
+                              <input type="file" id="attachment" class="form-control">
+                          </div>
+                          <div id="errorMsg" class="text-danger mb-3"></div>
+                          <button type="submit" class="btn btn-success text-capitalize">Send Message</button>
+                      </form>
+                      <div id="successMsg" class="text-success mt-3"></div>
                   </div>
                 </div>
-            </div>
-        </div>
-    </section>
+              </div>
+          </div>
+      </div>
+  </section>
+  
 </body>
 <script>
     // Handle contact form submission
-    $('#contactForm').on('submit', function(event) {
-        event.preventDefault();
-        alert("Message sent successfully!");
+    $(document).ready(function () {
+        $('#contactForm').submit(function (e) {
+            e.preventDefault(); // Prevent form from submitting traditionally
+            
+            // Clear previous messages
+            $('#errorMsg').text('');
+            $('#successMsg').text('');
+            
+            // Collect form data
+            const formData = new FormData(this);
+
+            // Validate phone number (optional)
+            const phone = $('#phone').val();
+            if (phone && !/^\d{10,15}$/.test(phone)) {
+                $('#errorMsg').text('Invalid phone number. Please enter a valid phone number.');
+                return;
+            }
+
+            // Perform AJAX request
+            $.ajax({
+                url: 'contact.php', // Replace with your backend processing URL
+                type: 'POST',
+                data: formData,
+                processData: false, // Required for form data submission
+                contentType: false, // Required for form data submission
+                success: function (response) {
+                    $('#successMsg').html('<strong>Thank you for contacting us!</strong> We will get back to you soon.');
+                    $('#contactForm')[0].reset(); // Clear form after successful submission
+                },
+                error: function (xhr, status, error) {
+                    $('#errorMsg').html('There was an error sending your message. Please try again later.');
+                }
+            });
+        });
     });
 </script>
 </html>

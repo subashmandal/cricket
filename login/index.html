@@ -45,23 +45,23 @@
 <body>
     <section class="bg-image" style="background-image: url('../Images/login.jpg'); min-height: 100vh;">
         <div class="container py-3 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="row d-flex justify-content-center align-items-center" style="min-height: 100vh;">
             <div class="col-12 col-md-8 col-lg-6 col-xl-5">
               <div class="card shadow-2-strong" style="border-radius: 1rem; background-color: rgba(145, 197, 161, 0.9);">
                 <div class="card-body p-4 text-center text-black">
       
                   <h3 class="mb-3 fw-bold">Sign in</h3>
       
-                  <div class="mb-3">
+                  <div class="mb-2">
                     <div class="form-helper text-start text-black">Email</div>
                     <input type="email" id="email" placeholder="Enter Email Id" class="form-control" />
-                    <small id="emailError" class="text-danger"></small>
+                    <div id="emailError" class="text-danger text-start"></div>
                   </div>
       
-                  <div class="mb-3">
+                  <div class="mb-2">
                     <div class="form-helper text-start text-black">Password</div>
                     <input type="password" id="password" placeholder="Enter Password" class="form-control" />
-                    <small id="passwordError" class="text-danger"></small>
+                    <div id="passwordError" class="text-danger text-start"></div>
                   </div>
       
                   <!-- Checkbox -->
