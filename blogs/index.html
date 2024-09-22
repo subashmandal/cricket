@@ -59,6 +59,14 @@
       .nav-link{
         color: white;
       }
+      .truncate-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
     </style>
   </head>
   <body>
@@ -162,8 +170,8 @@
                   <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                     <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
-                    <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
-                    <span class="fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
+                    <span class="fw-bold title text-to-truncate">This Is My Favourite picture that i use most of the time...</span>
+                    <span class="fs-6 fw-lighter text-to-truncate">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
                     <span class="" style="font-size: 10px;">Nov.17.2022</span>
                   </div>
                 </div>
@@ -176,7 +184,7 @@
                   <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                   <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                     <span><button type="button" class="btn btn-danger btn-sm">Music</button></span>
-                    <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
+                    <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
                     <span class="" style="font-size: 10px;">Nov.17.2022</span>
                   </div>
                 </div>
@@ -189,7 +197,7 @@
                     <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                     <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                       <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
-                      <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
+                      <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
                       <span class="" style="font-size: 10px;">Nov.17.2022</span>
                     </div>
                   </div>
@@ -200,7 +208,7 @@
                     <div class="mask rounded-6 ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                     <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                       <span><button type="button" class="btn btn-success btn-sm">Nature</button></span>
-                      <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
+                      <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
                       <span class="" style="font-size: 10px;">Nov.17.2022</span>
                     </div>
                   </div>
@@ -219,8 +227,8 @@
                       <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                       <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                         <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
-                        <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
-                        <span class="fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
+                        <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
+                        <span class="fs-6 fw-lighter truncate-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
                       <span class="" style="font-size: 10px;">Nov.17.2022</span>
                       </div>
                     </div>
@@ -231,8 +239,8 @@
                       <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                       <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                         <span><button type="button" class="btn btn-danger btn-sm">Music</button></span>
-                        <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
-                        <span class="fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
+                        <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
+                        <span class="fs-6 fw-lighter truncate-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
                         <span class="" style="font-size: 10px;">Nov.17.2022</span>
                       </div>
                     </div>
@@ -243,8 +251,8 @@
                    <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                    <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                      <span><button type="button" class="btn btn-warning btn-sm">Design</button></span>
-                     <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
-                     <span class="fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
+                     <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
+                     <span class="fs-6 fw-lighter truncate-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
                      <span class="" style="font-size: 10px;">Nov.17.2022</span>
                    </div>
                   </div>
@@ -255,8 +263,8 @@
                  <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                  <div class="position-absolute text-light bottom-0 text-wrap d-flex flex-column m-3" >
                    <span><button type="button" class="btn btn-success btn-sm">Nature</button></span>
-                   <span class="fw-bold title">This Is My Favourite picture that i use most of the time...</span>
-                   <span class="fs-6 fw-lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
+                   <span class="fw-bold title truncate-text">This Is My Favourite picture that i use most of the time...</span>
+                   <span class="fs-6 fw-lighter truncate-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores placeat deserunt illum fuga iusto temporibus!</span>
                    <span class="" style="font-size: 10px;">Nov.17.2022</span>
                  </div>
                </div>
@@ -276,12 +284,12 @@
                 <div class="mask ripple" style="background-color: rgba(18, 17, 17, 0.2);"></div>
                 </div>
                 <div class="card-body">
-                  <h5 class="card-title text-wrap title">It Really Have Good Feeling When You Enjoy Nature</h5>
+                  <h5 class="card-title text-wrap title truncate-text">It Really Have Good Feeling When You Enjoy Nature</h5>
                   <p class="card-text col">
                     <span class="fw-bold title">XYZ.org</span>
                     <small class="text-muted">Last updated 3 mins ago</small>
                   </p>
-                  <p class="card-text">
+                  <p class="card-text truncate-text">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
                   </p>
                   <span><button type="button" class="btn btn-primary btn-sm">Continue Reading</button></span>
@@ -298,12 +306,12 @@
                   <div class="col-lg-7 d-flex align-items-center">
                     <div class="ms-3 mt-2">
                       <button type="button" class="btn btn-success btn-sm d-none d-md-block">Nature</button>
-                      <h5 class="my-3 c-title">This Is My Favourite Place That I Visit</h5>
+                      <h5 class="my-3 c-title truncate-text">This Is My Favourite Place That I Visit</h5>
                       <p class="col">
                         <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
-                      <p class="card-text">
+                      <p class="card-text truncate-text">
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                       </p>
@@ -322,12 +330,12 @@
                   <div class="col-lg-7 d-flex align-items-center">
                     <div class="ms-3 mt-2">
                       <button type="button" class="btn btn-danger btn-sm d-none d-md-block">Music</button>
-                      <h5 class="my-3 c-title ">This Is My Favourite Song That I Usally Listen</h5>
+                      <h5 class="my-3 c-title truncate-text">This Is My Favourite Song That I Usally Listen</h5>
                       <p class="col">
                         <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
-                      <p class="card-text">
+                      <p class="card-text truncate-text">
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                       </p>
@@ -346,12 +354,12 @@
                   <div class="col-lg-7 d-flex align-items-center">
                     <div class="ms-3 mt-2">
                       <button type="button" class="btn btn-success btn-sm d-none d-md-block">Nature</button>
-                      <h5 class="my-3 c-title">This Is My Favourite Place That I mostly Visit</h5>
+                      <h5 class="my-3 c-title truncate-text">This Is My Favourite Place That I mostly Visit</h5>
                       <p class="col">
                         <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
-                      <p class="card-text">
+                      <p class="card-text truncate-text">
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                       </p>
@@ -370,12 +378,12 @@
                   <div class="col-lg-7 d-flex align-items-center">
                     <div class="ms-3 mt-2">
                       <button type="button" class="btn btn-success btn-sm d-none d-md-block">Nature</button>
-                      <h5 class="my-3 c-title">Best Place In india that you Should Visit Once.</h5>
+                      <h5 class="my-3 c-title truncate-text">Best Place In india that you Should Visit Once.</h5>
                       <p class="col">
                         <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
-                      <p class="card-text">
+                      <p class="card-text truncate-text">
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                       </p>
@@ -394,12 +402,12 @@
                   <div class="col-lg-7 d-flex align-items-center">
                     <div class="ms-3 mt-2">
                       <button type="button" class="btn btn-info btn-sm d-none d-md-block">Fruits</button>
-                      <h5 class="my-3 c-title">My Favourite Fruit.</h5>
+                      <h5 class="my-3 c-title truncate-text">My Favourite Fruit.</h5>
                       <p class="col">
                         <span class="fw-bold title">XYZ.org</span>
                         <small class="text-muted">Last updated 3 mins ago</small>
                       </p>
-                      <p class="card-text">
+                      <p class="card-text truncate-text">
                         This is a wider card with supporting text below as a natural lead-in to
                         additional content. This content is a little bit longer.
                       </p>
@@ -549,7 +557,7 @@
                       <div style="background-image: url('../Images/cricket_image/download.jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                     </div>
                     <div class="col-lg-9 col-md-6 col-9 d-flex justify-content-center flex-column">
-                        <h6 class="fw-light c-title">My Favourite Fruit.</h6>
+                        <h6 class="fw-light c-title truncate-text">My Favourite Fruit.</h6>
                         <small class="text-muted">Nov.01.2022</small>
                     </div>
                 </div>
@@ -561,7 +569,7 @@
                         <div style="background-image: url('../Images/cricket_image/ai-generated-cricket-bat-ball-stumps-and-bails-photo.jpg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
                       </div>
                       <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
-                          <h6 class="fw-light c-title">This Is My Favourite Place That I mostly Visit</h6>
+                          <h6 class="fw-light c-title truncate-text">This Is My Favourite Place That I mostly Visit</h6>
                           <small class="text-muted">Oct.16.2022</small>
                       </div>
                   </div>
@@ -569,12 +577,14 @@
 
                   <div class="mb-1 bg-transparent shadow-0" style="cursor: pointer;">
                     <div class="row">
-                        <div class="col-lg-3 col-3">
-                          <div style="background-image: url('../Images/cricket_image/images\ \(1\).jpeg'); background-position: center; background-repeat: no-repeat; background-size: contain; height: 8vh;"></div>
+                      
+                        <div class="col-lg-3 col-3 bg-image hover-overlay">
+                          <img src="../Images/cricket_image/images (1).jpeg" class="rounded img-fluid" style="height: 10vh;">
+                          <div class="mask" style="background-color: hsla(0, 0%, 98%, 0.2)"></div>
                         </div>
                         <div class="col-lg-9 col-9 d-flex justify-content-center flex-column">
-                            <h6 class="fw-light c-title">My Favourite Fruit.</h6>
-                            <small class="text-muted">Nov.17.2022</small>
+                          <a href="#!"><h6 class="fw-light c-title truncate-text">My Favourite Fruit.</h6></a>
+                          <small class="text-muted">Nov.17.2022</small>
                         </div>
                     </div>
                     </div>
@@ -583,24 +593,21 @@
               <div class="my-3">
                 <h4 class="text-black"><u>Subscribe Us</u></h4>
               <div class="col-lg-12">
-                <iframe width="100%" height="300" src="https://www.youtube.com/embed/Y_YAad9gLDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-              </div>
-              </div>
-              <!-- Facebook -->
-              <div class="my-3">
-                <h4 class="text-black"><u>Facebook</u></h4>
-              <div class="col-lg-12">
-                <iframe title="Inline Frame Example" width="100%" height="200" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.004017949104309083%2C51.47612752641776%2C0.00030577182769775396%2C51.478569861898606&layer=mapnik"></iframe>
+                <iframe width="100%" height="300" src="https://www.youtube.com/embed/4xDS_f9O_9U?si=9c6pZ2cYtI_ZpXGx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
               </div>
               <!-- Tags -->
               <div class="my-3">
                 <h4 class="text-black"><u>Tags</u></h4>
                 <div class="">
-                  <button type="button" class="btn btn-secondary btn-sm m-1">Music</button>
-                  <button type="button" class="btn btn-secondary btn-sm m-1">Nature</button>
-                  <button type="button" class="btn btn-secondary btn-sm m-1">Fruits</button>
-                  <button type="button" class="btn btn-secondary btn-sm m-1">Design</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">cricket</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">live cricket scores</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">Fruicricket newss</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">cricket match</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">T20</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">IPL</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">ODI</button>
+                  <button type="button" class="btn btn-secondary btn-sm m-1 btn-rounded">Test matches</button>
                 </div>
               </div>
             </div>
@@ -613,16 +620,16 @@
 
             <div class="col-lg-3">
               <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
-                <img src="../Images/cricket_image/download.jpeg" class="img-fluid rounded-6 w-100"/>
+                <img src="../Images/cricket_image/cricket-team-1.avif" class="img-fluid rounded-6 w-100"/>
                 <a href="#!">
-                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  <div class="mask" style="background-color: rgba(132, 106, 199, 0.15);"></div>
                 </a>
               </div>
               <div class="card-body">
-                <h5 class="d-flex justify-content-center c-title">This Is My Favourite Place That I mostly Visit</h5>
+                <div class="fw-bold c-title truncate-text">This Is My Favourite picture that i use most of the time...</div>
                 <p class="card-text col">
                   <span class="fw-bold">XYZ.org</span>
-                  <small class="text-muted">Nov.11.2022</small>
+                  <small class="text-muted">Nov.13.2022</small>
                 </p>
               </div>
             </div>
@@ -635,7 +642,7 @@
                 </a>
               </div>
               <div class="card-body">
-                <h5 class="d-flex justify-content-center c-title">This Is My Favourite picture that i use most of the time...</h5>
+                <div class="fw-bold c-title truncate-text">This Is My Favourite picture that i use most of the time...</div>
                 <p class="card-text col">
                   <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.13.2022</small>
@@ -651,7 +658,7 @@
                 </a>
               </div>
               <div class="card-body">
-                <h5 class="d-flex justify-content-center c-title">Best Place In india that you Should Visit Once.</h5>
+                <div class="fw-bold c-title truncate-text">Best Place In india that you Should Visit Once.</div>
                 <p class="card-text col">
                   <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.18.2022</small>
@@ -667,7 +674,7 @@
                 </a>
               </div>
               <div class="card-body">
-                <h5 class="d-flex justify-content-center c-title">This Is My Favourite picture that i use most of the time...</h5>
+                <div class="fw-bold c-title truncate-text">This Is My Favourite picture that i use most of the time...</div>
                 <p class="card-text col">
                   <span class="fw-bold">XYZ.org</span>
                   <small class="text-muted">Nov.07.2022</small>
@@ -806,8 +813,15 @@
     <!-- End your project here-->
 
     <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="../js/mdb.min.js"></script>
+    <script src="../plugins/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"></script>
     <!-- Custom scripts -->
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      document.querySelectorAll('.text-to-truncate').forEach(element => {
+        element.classList.add('truncate-text');
+      });
+
+    </script>
   </body>
 </html>
